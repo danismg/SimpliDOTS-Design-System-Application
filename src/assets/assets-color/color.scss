@@ -1,0 +1,187 @@
+$text: (
+  default: #1f2e34,
+  secondary: #09c4b2,
+  description: #6e7882,
+  disabled: #7e8792,
+  selected: #1e90ff,
+  selected-bold: #eb3b5a,
+  inversed: #ffffff,
+  subtle: #5e6973,
+  subtlest: #6e7882,
+  danger: #e81a3e,
+  info: #e81a3e,
+  warning: #fba02e,
+  success: #08ac9c,
+  discovery: #8b85db,
+);
+
+$icon: (
+  default: #49565e,
+  secondary: #09c4b2,
+  disabled: #7e8792,
+  selected: #1e90ff,
+  selected-bold: #eb3b5a,
+  inversed: #ffffff,
+  sebtle: #5e6973,
+  sebtlest: #6e7882,
+  danger: #e81a3e,
+  info: #1e90ff,
+  warning: #fba02e,
+  success: #08ac9c,
+  discovery: #8b85db,
+);
+
+$link: (
+  default: #007ef9,
+  pressed: #006cd6,
+);
+
+$border: (
+  focused: #006cd6,
+  brand-secondary: black,
+  disabled: #dfe1e6,
+  input: #c2c7cf,
+  default: #dfe1e6,
+  danger: #e81a3e,
+  selected-bold: #eb3b5a,
+);
+
+$blanket: (
+  default: #eb3b5a,
+);
+
+$bg-color: (
+  danger: #fbd8de,
+  warning: #fef0de,
+  success: #dbfdfa,
+  info: #d2e9ff,
+);
+
+$bg-neutral: (
+  default: #f4f5f7,
+  hover: #dfe1e6,
+  pressed: #c2c7cf,
+  subtle: #ffffff,
+  subtle-hover: #f4f5f7,
+  subtle-pressed: #dfe1e6,
+  bold: #49565e,
+  bold-hover: #3d4a52,
+  bold-pressed: #1f2e34,
+);
+
+$bg-brand: (
+  bold: #09c4b2,
+  bold-hover: #08ac9c,
+  bold-pressed: #079386,
+  secondary: #ffffff,
+  secondary-hover: #dbfdfa,
+  secondary-pressed: #97f4ec,
+);
+
+$bg-selected: (
+  default: #dff0ff,
+  bold: #1e90ff,
+  bold-hover: #006cd6,
+);
+
+$bg-disabled: (
+  default: #f4f5f7,
+);
+
+$bg-input: (
+  default: #ffffff,
+  hover: #f4f5f7,
+  pressed: #ffffff,
+);
+
+$neutral: (
+  0: #ffffff,
+  10: #fafbfc,
+  20: #f4f5f7,
+  30: #ebecf0,
+  40: #dfe1e6,
+  50: #c2c7cf,
+  60: #b2b8c0,
+  70: #a2a9b2,
+  80: #9ea4b1,
+  90: #959ca8,
+  100: #808894,
+  200: #7e8792,
+  300: #6e7882,
+  400: #5e6973,
+  500: #49565e,
+  600: #3d4a52,
+  700: #2e3c43,
+  800: #1f2e34,
+  900: #112025,
+);
+
+$darkRed: (
+  50: #fbd8de,
+  75: #f7b1bd,
+  100: #f3899c,
+  200: #ef627b,
+  300: #eb3b5a,
+  400: #e81a3e,
+  500: #c81434,
+);
+
+$teal: (
+  50: #dbfdfa,
+  75: #b6fcf5,
+  100: #6df8eb,
+  200: #16f4df,
+  300: #09c4b2,
+  400: #08ac9c,
+  500: #079386,
+);
+
+$yellow: (
+  50: #fef0de,
+  75: #fee1bc,
+  100: #fdd19b,
+  200: #fdc279,
+  300: #fcb358,
+  400: #fba02e,
+  500: #fb8d04,
+);
+
+$green: (
+  50: #def3e5,
+  75: #bde7cb,
+  100: #9bdbb1,
+  200: #7acf97,
+  300: #59c37d,
+  400: #42b76a,
+  500: #399c5a,
+);
+
+$purple: (
+  50: #e8e7f8,
+  75: #d1cef1,
+  100: #b9b6e9,
+  200: #a29de2,
+  300: #8b85db,
+  400: #6b63d1,
+  500: #4a41c7,
+);
+
+$blue: (
+  50: #d2e9ff,
+  75: #a5d3ff,
+  100: #78bcff,
+  200: #4ba6ff,
+  300: #1e90ff,
+  400: #007ef9,
+  500: #006cd6,
+);
+
+$red: (
+  50: #fedee0,
+  75: #febec1,
+  100: #fd9da3,
+  200: #fd7d84,
+  300: #fc5c65,
+  400: #fb323d,
+  500: #fa0815,
+);

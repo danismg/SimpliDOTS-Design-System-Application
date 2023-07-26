@@ -1,0 +1,207 @@
+@import "../../assets/assets-color/color.scss";
+@import "../../assets/assets-color/font.scss";
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 3px;
+  border: none;
+  text-align: center;
+
+  @include font-btn;
+}
+
+.btn-big {
+  padding: 4px 12px;
+  height: 32px;
+}
+
+.btn-small {
+  height: 24px;
+}
+
+.btn-NSpacing {
+  padding: 0px 8px;
+  width: 36px;
+  height: 24px;
+}
+
+// .ic__img-secondary {
+//   filter: invert(59%) sepia(56%) saturate(600%) hue-rotate(125deg)
+//     brightness(92%) contrast(103%);
+// }
+
+.btn-secondary,
+.ic__img-secondary,
+.ic__load-secondary {
+  border: 1px solid map-get($map: $border, $key: brand-secondary);
+  color: map-get($map: $text, $key: secondary);
+
+  &:hover {
+    border: 1px solid map-get($map: border, $key: brand-secondary);
+    background: map-get($map: $bg-brand, $key: secondary-hover);
+  }
+  &:focus {
+    border: 1px solid map-get($map: border, $key: brand-secondary);
+    background: map-get($map: $bg-brand, $key: secondary-pressed);
+  }
+
+  &:disabled {
+    color: map-get($map: $text, $key: selected);
+    background: map-get($map: $bg-selected, $key: default);
+  }
+}
+.btn-default,
+.ic__img-default,
+.ic__load-default {
+  background: map-get($map: $bg-neutral, $key: default);
+  color: map-get($map: $text, $key: default);
+
+  &:hover {
+    background: map-get($map: $bg-neutral, $key: hover) !important;
+  }
+  &:focus {
+    border: 2px solid var(--border-focused, #006cd6);
+  }
+
+  &:disabled {
+    background: map-get($map: $bg-disabled, $key: default);
+    color: map-get($map: $text, $key: disabled);
+  }
+}
+
+.btn-primary,
+.ic__img-primary,
+.ic__load-primary {
+  background: map-get($map: $bg-brand, $key: default);
+  color: white;
+
+  &:hover {
+    background: map-get($map: $bg-brand, $key: bold-hover);
+  }
+  &:focus {
+    background: map-get($map: $bg-brand, $key: pressed);
+  }
+
+  &:disabled {
+    background: map-get($map: $bg-disabled, $key: default);
+    color: map-get($map: $text, $key: disabled);
+  }
+}
+
+.btn-subtle,
+.ic__img-subtle,
+.ic__load-subtle {
+  background-color: transparent;
+  &:hover {
+    border-radius: 3px;
+    color: map-get($map: $text, $key: subtle);
+    background: map-get($map: $bg-neutral, $key: subtle-hover);
+  }
+  &:focus {
+    border-radius: 3px;
+    padding: (padding - 2px) !important;
+    border: 2px solid map-get($map: border, $key: focused) !important;
+  }
+
+  &:disabled {
+    color: map-get($map: $text, $key: disabled) !important;
+    background: map-get($map: $bg-disabled, $key: default) !important;
+  }
+}
+
+.btn-link,
+.ic__img-link,
+.ic__load-link {
+  background: white;
+  color: map-get($map: $link, $key: default);
+  &:hover {
+    background: var(--background-neutral-subtle-hover, #f4f5f7);
+  }
+  &:focus {
+    background: map-get($map: $bg-neutral, $key: subtle-pressed) !important;
+  }
+
+  &:disabled {
+    background: map-get($map: $bg-disabled, $key: default) !important;
+  }
+}
+
+.ic__img {
+  display: inline-flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.ic__img-disabled {
+  background: map-get($map: $bg-neutral, $key: default);
+  pointer-events: none;
+  border-radius: 3px;
+}
+.ic-big {
+  max-height: 32px !important;
+  max-width: 32px !important;
+  padding: 4px;
+}
+.ic-small {
+  max-height: 24px !important;
+  max-width: 32px !important;
+  padding: 0 4px;
+}
+
+.card__err {
+  display: inline-flex;
+  height: 60px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  border: 1px solid map-get($map: $red, $key: 300);
+  background: map-get($map: $darkRed, $key: 50);
+  color: map-get($map: $darkRed, $key: 500);
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 7.2px */
+}
+
+.card__err-img {
+  width: 20px;
+  height: 20px;
+}
+
+.ic__load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  max-height: 36px !important;
+  &img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+}
+
+.ic__load-big {
+  max-width: 32px !important;
+  padding: 10px;
+}
+.ic__load-small {
+  display: flex;
+  width: 44px;
+  height: 28px;
+  padding: 10px;
+}
