@@ -1,5 +1,5 @@
-@import "../../assets/assets-color/color.scss";
-@import "../../assets/assets-color/font.scss";
+@import "../../../assets/assets-color/color.scss";
+@import "../../../assets/assets-color/font.scss";
 
 .btn {
   display: inline-flex;
@@ -11,15 +11,16 @@
   text-align: center;
 
   @include font-btn;
+  line-height: 24px !important;
 }
 
-.btn-big {
+.btn-default {
   padding: 4px 12px;
-  height: 32px;
 }
 
-.btn-small {
-  height: 24px;
+.btn-compact {
+  padding: 0px 8px;
+  box-sizing: border-box;
 }
 
 .btn-NSpacing {
@@ -40,11 +41,11 @@
   color: map-get($map: $text, $key: secondary);
 
   &:hover {
-    border: 1px solid map-get($map: border, $key: brand-secondary);
+    border: 1px solid map-get($map: $border, $key: brand-secondary);
     background: map-get($map: $bg-brand, $key: secondary-hover);
   }
   &:focus {
-    border: 1px solid map-get($map: border, $key: brand-secondary);
+    border: 1px solid map-get($map: $border, $key: brand-secondary);
     background: map-get($map: $bg-brand, $key: secondary-pressed);
   }
 
@@ -103,7 +104,7 @@
   &:focus {
     border-radius: 3px;
     padding: (padding - 2px) !important;
-    border: 2px solid map-get($map: border, $key: focused) !important;
+    border: 2px solid map-get($map: $border, $key: focused) !important;
   }
 
   &:disabled {
@@ -143,12 +144,12 @@
   pointer-events: none;
   border-radius: 3px;
 }
-.ic-big {
+.ic-default {
   max-height: 32px !important;
   max-width: 32px !important;
   padding: 4px;
 }
-.ic-small {
+.ic-comp {
   max-height: 24px !important;
   max-width: 32px !important;
   padding: 0 4px;
