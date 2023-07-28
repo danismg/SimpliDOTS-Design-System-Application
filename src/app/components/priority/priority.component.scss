@@ -1,55 +1,9 @@
 @import "../../../assets/assets-color/color.scss";
 @import "../../../assets/assets-color/font.scss";
 
-td {
-  align-items: center;
-}
-
 p {
   margin: 0;
 }
-
-.lozenge {
-  text-align: center;
-
-  /* Sub title */
-  @include sub-title;
-  display: inline-flex;
-  padding: 2px 8px;
-  /* align-items: flex-start; */
-  gap: 4px;
-  border-radius: 3px;
-}
-
-.loz-default {
-  background: map-get($map: $bg-neutral, $key: default);
-  color: map-get($map: $text, $key: subtle);
-}
-.loz-inprogress {
-  background: map-get($map: $bg-color, $key: info);
-  color: map-get($map: $text, $key: info);
-}
-.loz-warning {
-  background: map-get($map: $bg-color, $key: warning);
-  color: map-get($map: $text, $key: warning);
-}
-.loz-new {
-  background: map-get($map: $bg-color, $key: discovery);
-  color: map-get($map: $text, $key: disabled);
-}
-.loz-removed {
-  background: map-get($map: $bg-color, $key: danger);
-  color: map-get($map: $text, $key: danger);
-}
-.loz-success {
-  background: map-get($map: $bg-color, $key: success);
-  color: map-get($map: $text, $key: success);
-}
-// .loz-green {
-//     background: map-get($map: $bg-color $key:  );
-//   background: var(--background-neutral-default, #def3e5);
-//   color: var(--text-subtle, #59c37d);
-// }
 
 .lozenge-o {
   display: inline-flex;
