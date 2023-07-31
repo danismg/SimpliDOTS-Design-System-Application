@@ -1,0 +1,38 @@
+<div class="empty__items">
+    <div class="empty__item-top">
+      <div class="temp__icon-itemplate"></div>
+    </div>
+    <div class="empty__item-down">
+              <div class="empty__texts">
+                <p class="empty__title">This is the empty state’s title</p>
+                <p class="empty__desc">
+                  Additional information that will help users understand the
+                  empty state.
+                </p>
+              </div>
+              <div class="empty__btns">
+                <div class="empty__btn-top">
+                  
+                  <app-button
+            [color]="colorBtn.SUBTLE"
+            [spacing]="spacingBtn.DEFAULT"
+            (onClick)="goToGoogle()"
+            >Go To Google</app-button
+          >
+          <app-button
+            [color]="colorBtn.PRIMARY"
+            [spacing]="spacingBtn.DEFAULT"
+            (onClick)="goToGoogle()"
+            >Go To Google</app-button
+          >
+                </div>
+                
+                <app-button
+            [color]="colorBtn.LINK"
+            [spacing]="spacingBtn.DEFAULT"
+            (onClick)="goToGoogle()"
+            >Go To Google</app-button
+          >
+              </div>
+            </div>
+          </div>

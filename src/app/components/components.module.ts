@@ -6,6 +6,7 @@ import { StatusTableComponent } from './status-table/status-table.component';
 import { ListBreadcrumbsComponent } from './list-breadcrumbs/list-breadcrumbs.component';
 import { ListBreadcrumbsModule } from './list-breadcrumbs/list-breadcrumbs.module';
 import { OnboardingModalComponent } from './onboarding-modal/onboarding-modal.component';
+import { EmptyStateComponent } from './empty-state/empty-state.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { OnboardingModalComponent } from './onboarding-modal/onboarding-modal.co
     PriorityComponent,
     StatusTableComponent,
     OnboardingModalComponent,
+    EmptyStateComponent,
     // ListBreadcrumbsComponent,
   ],
   imports: [
@@ -25,6 +27,7 @@ import { OnboardingModalComponent } from './onboarding-modal/onboarding-modal.co
     StatusTableComponent,
     // ListBreadcrumbsModule,
     OnboardingModalComponent,
+    EmptyStateComponent,
   ],
 })
 export class ComponentsModule {}
