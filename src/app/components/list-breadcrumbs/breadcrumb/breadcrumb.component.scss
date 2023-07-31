@@ -1,0 +1,56 @@
+// @import "./../../../../assets/assets-color/font.scss";
+// @import "./../../../../assets/assets-color/color.scss";
+
+// p {
+//   margin: 0;
+// }
+// a {
+//   text-decoration: none;
+// }
+
+// .breadcr__item {
+//   width: max-content;
+// }
+
+// .breadcr__texts {
+//   // display: inline-flex;
+//   align-items: center;
+//   gap: 8px;
+// }
+
+// .breadcr__text {
+//   width: 100%;
+//   text-align: center;
+
+//   /* Body/Reg */
+//   @include font-body;
+// }
+
+// .breadcr__data-hover {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   color: white;
+//   bottom: -32px;
+//   border-radius: 3px;
+// }
+
+// .breadcr__data-hover-text {
+//   display: flex;
+//   padding: 2px 6px;
+//   align-items: flex-start;
+//   gap: 10px;
+//   border-radius: 3px;
+//   background: map-get($map: $bg-neutral, $key: bold);
+//   @include font-body;
+// }
+
+// .breadcr__text-default {
+//   color: map-get($map: $text, $key: subtle);
+// }
+// .breadcr__text-pressed {
+//   color: map-get($map: $text, $key: default);
+// }
+// .breadcr__text-focus {
+//   color: map-get($map: $text, $key: selected);
+// }

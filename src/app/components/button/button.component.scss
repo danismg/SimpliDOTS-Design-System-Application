@@ -76,11 +76,11 @@
 .btn-primary,
 .ic__img-primary,
 .ic__load-primary {
-  background: map-get($map: $bg-brand, $key: default);
+  background: map-get($map: $bg-brand, $key: bold);
   color: white;
 
   &:hover {
-    background: map-get($map: $bg-brand, $key: bold-hover);
+    background: map-get($map: $bg-brand, $key: bold-hover) !important;
   }
   &:focus {
     background: map-get($map: $bg-brand, $key: pressed);

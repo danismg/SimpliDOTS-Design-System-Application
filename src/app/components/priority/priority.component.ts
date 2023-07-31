@@ -1,18 +1,18 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CirleColor } from 'src/assets/beheviors/circle-priority/CircleColor';
 @Component({
   selector: 'label-priority',
   templateUrl: './priority.component.html',
   styleUrls: ['./priority.component.scss'],
 })
 export class PriorityComponent implements OnInit {
-  // @Input() color: ColorEnum = ColorEnum.DEFAULT;
-  // @Input() spacing: SpacingEnum = SpacingEnum.DEFAULT;
+  @Input() circle: CirleColor = CirleColor.DEFAULT;
   constructor() {}
   ngOnInit(): void {}
-  // getClassNames() {
-  //   return `lozenge loz-default
-  //   btn-${ColorEnum[this.color].toLowerCase()}
-  //   btn-${SpacingEnum[this.spacing].toLowerCase()}`;
-  // }
-  // lozenge loz-default
+
+  getClassNames() {
+    return `./../../../assets/icon/circle-priority/priority-${CirleColor[
+      this.circle
+    ].toLowerCase()}.svg`;
+  }
 }

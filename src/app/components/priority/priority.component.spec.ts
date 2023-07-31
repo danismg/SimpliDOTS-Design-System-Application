@@ -8,7 +8,7 @@ describe('PriorityComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PriorityComponent]
+      declarations: [PriorityComponent],
     });
     fixture = TestBed.createComponent(PriorityComponent);
     component = fixture.componentInstance;

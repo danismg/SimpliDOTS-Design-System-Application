@@ -1,11 +1,72 @@
-<app-button
-  [color]="colorMode.DEFAULT"
-  [spacing]="spacingMode.DEFAULT"
-  (onClick)="goToGoogle()"
-  >Go To Google</app-button
->
+<div class="template">
+  <div class="content">
+    <div class="temp__icon">
+      <img class="temp__icon" src="./../assets/Stickersheet.svg" alt="" />
+    </div>
+    <div class="temp__descs">
+      <p class="temp__title-text">Banner</p>
+      <p class="temp__desc">
+        Common component examples ready to be copy and pasted into your designs
+      </p>
+    </div>
+  </div>
+  <div class="temp__items">
+    <div class="temp__container">
+      <div class="temp__tabel">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 1fr; color: red">Component</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr; color: red">View</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th style="width: 1fr">Label Status</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <status-table [color]="ColorStatus.DEFAULT">Label</status-table>
+              </th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">Button</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <app-button
+                  [color]="colorBtn.PRIMARY"
+                  [spacing]="spacingBtn.DEFAULT"
+                  (onClick)="goToGoogle()"
+                  >Go To Google</app-button
+                >
+              </th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">Label Priority</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <label-priority [circle]="cirleLabel.DEFAULT"
+                  >Label</label-priority
+                >
+              </th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">Breadcrumbs</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr"></th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">OnBoarding Modal</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <onboarding-modal></onboarding-modal>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
-<br />
-<br />
-
-<label-priority></label-priority>
+<!-- <list-breadcrumbs></list-breadcrumbs> -->

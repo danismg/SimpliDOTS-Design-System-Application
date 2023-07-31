@@ -1,0 +1,34 @@
+<div class="onBoarding-modal">
+  <div class="onBoarding-modal__container">
+    <div class="onBoarding-modal__top">
+      <img
+        src="./../../../assets/icon/onboarding/onboarding-modal.svg"
+        alt=""
+      />
+    </div>
+    <div class="onBoarding-modal__down">
+      <div class="onBoarding-modal__content">
+        <div class="onBoarding-modal__title">This is the modal’s header</div>
+        <div class="onBoarding-modal__desc">
+          Additional information that will help users understand the modal.
+        </div>
+      </div>
+      <div class="onBoarding-modal__btns">
+        <app-button
+          [color]="colorBtn.SUBTLE"
+          [spacing]="spacingBtn.DEFAULT"
+          (onClick)="goToGoogle()"
+          >Go To Google</app-button
+        >
+        <div class="onBoarding-modal__btns">
+          <app-button
+            [color]="colorBtn.PRIMARY"
+            [spacing]="spacingBtn.DEFAULT"
+            (onClick)="goToGoogle()"
+            >Go To Google</app-button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
