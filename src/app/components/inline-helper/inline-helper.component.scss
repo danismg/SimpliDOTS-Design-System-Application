@@ -1,0 +1,74 @@
+p {
+  margin: 0;
+}
+
+.temp__containers {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+.temp__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.InlineHelper__card {
+  width: max-content;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border-radius: 4px;
+  background: var(--background-neutral-subtle-default, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.InlineHelper__card-top {
+  /* width: max-content; */
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+
+  /* color */
+  border-radius: 8px 8px 0px 0px;
+  background: var(--background-info, #d2e9ff);
+}
+
+.InlineHelper__card-down {
+  width: max-content;
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.InLineHelper__pin {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.InLineHelper__title {
+  color: #000;
+
+  /* H4 */
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
+}
+
+.InLineHelper__info {
+  /* isi table nanti */
+}
+
+.InlineHelper__detail {
+  /* isi table nanti */
+  width: 239px;
+  height: 44px;
+  opacity: 0.3499999940395355;
+  background: var(--light-color-background-accent-magenta-subtle, #e774bb);
+}

@@ -4,6 +4,7 @@ import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
 import { CirleColor } from '../assets/beheviors/circle-priority/CircleColor';
 import { ColorStatus } from '../assets/beheviors/label-status/ColorStatus';
 import { BannerMode } from 'src/assets/beheviors/banner/BannerMode';
+import { FlagColor, FlagIcon } from '../assets/beheviors/flag/FlagMode';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,12 @@ export class AppComponent {
 
   get modeBanner(): typeof BannerMode {
     return BannerMode;
+  }
+  get colorFlag(): typeof FlagColor {
+    return FlagColor;
+  }
+  get iconFlag(): typeof FlagIcon {
+    return FlagIcon;
   }
 
   goToGoogle() {

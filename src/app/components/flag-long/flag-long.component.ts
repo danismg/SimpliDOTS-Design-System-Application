@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
 import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
-
 @Component({
-  selector: 'empty-state',
-  templateUrl: './empty-state.component.html',
-  styleUrls: ['./empty-state.component.scss'],
+  selector: 'flag-long',
+  templateUrl: './flag-long.component.html',
+  styleUrls: ['./flag-long.component.scss'],
 })
-export class EmptyStateComponent {
+export class FlagLongComponent {
   get colorBtn(): typeof ColorEnum {
     return ColorEnum;
   }

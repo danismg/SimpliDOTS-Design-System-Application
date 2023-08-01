@@ -1,0 +1,10 @@
+<div class="progress-bar__bg-line">
+  <div
+    *ngFor="let setting of settings"
+    [ngStyle]="{
+      width: getResultWidthPercentage(setting.size),
+      backgroundColor: setting.color
+    }"
+    class="progress-bar__line"
+  ></div>
+</div>

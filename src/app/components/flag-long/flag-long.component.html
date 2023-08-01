@@ -1,0 +1,34 @@
+<div class="flag">
+  <div class="flag__container-top">
+    <div class="flag__title">
+      <img
+        class="flag__ic-img"
+        src="./../../../assets/icon/info/ic-exit-O.svg"
+        alt=""
+      />
+      <div class="flag__title-list">
+        <p class="flag__title">Flag</p>
+        <div class="line"></div>
+        <div class="flag__add-list">
+          <p class="flag__title">Additional info</p>
+          <div class="line"></div>
+          <p class="flag__title">Additional info</p>
+        </div>
+      </div>
+      <div class="flag__info__buttons">
+        <app-button
+          [color]="colorBtn.SECONDARY"
+          [spacing]="spacingBtn.DEFAULT"
+          (onClick)="goToGoogle()"
+          >Delete</app-button
+        >
+        <app-button
+          [color]="colorBtn.PRIMARY"
+          [spacing]="spacingBtn.DEFAULT"
+          (onClick)="goToGoogle()"
+          >Move</app-button
+        >
+      </div>
+    </div>
+  </div>
+</div>

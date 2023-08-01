@@ -26,7 +26,9 @@
               <th style="width: 1fr">Label Status</th>
               <th style="width: 1fr"></th>
               <th style="width: 3fr">
-                <status-table [color]="ColorStatus.DEFAULT">Label</status-table>
+                <status-table [color]="ColorStatus.DEFAULT"
+                  >Labell</status-table
+                >
               </th>
             </tr>
             <tr>
@@ -46,7 +48,7 @@
               <th style="width: 1fr"></th>
               <th style="width: 3fr">
                 <label-priority [circle]="cirleLabel.DEFAULT"
-                  >Label</label-priority
+                  >Labell</label-priority
                 >
               </th>
             </tr>
@@ -71,7 +73,49 @@
               <th style="width: 1fr">Banner</th>
               <th style="width: 1fr"></th>
               <th style="width: 3fr">
-                <banner [mode]="modeBanner.WARNING"></banner>
+                <!-- <banner [mode]="modeBanner.WARNING" [btnText]="test"></banner> -->
+                <banner [mode]="modeBanner.WARNING">Button</banner>
+              </th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">Flag</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <flag
+                  [color]="colorFlag.DEFAULT"
+                  [icon]="iconFlag.IMAGE"
+                ></flag>
+              </th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">Flag Description</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <flag-desc
+                  [color]="colorFlag.DEFAULT"
+                  [icon]="iconFlag.IMAGE"
+                ></flag-desc>
+              </th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">Flag Description</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <flag-long></flag-long>
+              </th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">Inline Helper</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <inline-helper></inline-helper>
+              </th>
+            </tr>
+            <tr>
+              <th style="width: 1fr">Progress Bar</th>
+              <th style="width: 1fr"></th>
+              <th style="width: 3fr">
+                <progress-bar></progress-bar>
               </th>
             </tr>
           </tbody>

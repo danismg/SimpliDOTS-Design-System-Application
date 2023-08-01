@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CirleColor } from 'src/assets/beheviors/circle-priority/CircleColor';
 @Component({
   selector: 'label-priority',

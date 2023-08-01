@@ -37,21 +37,21 @@
 .btn-secondary,
 .ic__img-secondary,
 .ic__load-secondary {
-  border: 1px solid map-get($map: $border, $key: brand-secondary);
-  color: map-get($map: $text, $key: secondary);
+  border: 1px solid map-get($map: $border, $key: brand-secondary) !important;
+  color: map-get($map: $text, $key: secondary) !important;
 
   &:hover {
-    border: 1px solid map-get($map: $border, $key: brand-secondary);
-    background: map-get($map: $bg-brand, $key: secondary-hover);
+    border: 1px solid map-get($map: $border, $key: brand-secondary) !important;
+    background: map-get($map: $bg-brand, $key: secondary-hover) !important;
   }
   &:focus {
-    border: 1px solid map-get($map: $border, $key: brand-secondary);
-    background: map-get($map: $bg-brand, $key: secondary-pressed);
+    border: 1px solid map-get($map: $border, $key: brand-secondary) !important;
+    background: map-get($map: $bg-brand, $key: secondary-pressed) !important;
   }
 
   &:disabled {
     color: map-get($map: $text, $key: selected);
-    background: map-get($map: $bg-selected, $key: default);
+    background: map-get($map: $bg-selected, $key: default) !important;
   }
 }
 .btn-default,
@@ -61,7 +61,7 @@
   color: map-get($map: $text, $key: default);
 
   &:hover {
-    background: map-get($map: $bg-neutral, $key: hover) !important;
+    background: map-get($map: $bg-neutral, $key: hover);
   }
   &:focus {
     border: 2px solid var(--border-focused, #006cd6);
