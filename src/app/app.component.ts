@@ -3,6 +3,7 @@ import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
 import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
 import { CirleColor } from '../assets/beheviors/circle-priority/CircleColor';
 import { ColorStatus } from '../assets/beheviors/label-status/ColorStatus';
+import { BannerMode } from 'src/assets/beheviors/banner/BannerMode';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,10 @@ export class AppComponent {
   }
   get ColorStatus(): typeof ColorStatus {
     return ColorStatus;
+  }
+
+  get modeBanner(): typeof BannerMode {
+    return BannerMode;
   }
 
   goToGoogle() {

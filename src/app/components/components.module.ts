@@ -7,6 +7,7 @@ import { ListBreadcrumbsComponent } from './list-breadcrumbs/list-breadcrumbs.co
 import { ListBreadcrumbsModule } from './list-breadcrumbs/list-breadcrumbs.module';
 import { OnboardingModalComponent } from './onboarding-modal/onboarding-modal.component';
 import { EmptyStateComponent } from './empty-state/empty-state.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { EmptyStateComponent } from './empty-state/empty-state.component';
     StatusTableComponent,
     OnboardingModalComponent,
     EmptyStateComponent,
+    BannerComponent,
     // ListBreadcrumbsComponent,
   ],
   imports: [
@@ -28,6 +30,7 @@ import { EmptyStateComponent } from './empty-state/empty-state.component';
     // ListBreadcrumbsModule,
     OnboardingModalComponent,
     EmptyStateComponent,
+    BannerComponent,
   ],
 })
 export class ComponentsModule {}
