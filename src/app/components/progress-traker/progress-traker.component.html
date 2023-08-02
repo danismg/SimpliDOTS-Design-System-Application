@@ -1,0 +1,11 @@
+<div class="trackers__list">
+  <div *ngFor="let setting of settings" class="trackers__titles">
+    <div class="trackers__left trackers__left-default">
+      <p class="trackers__ic-number">{{ setting.id }}</p>
+    </div>
+    <div class="trackers__right">
+      <div class="tracker__title">{{ setting.title }}</div>
+      <div class="tracker__desc">{{ setting.description }}</div>
+    </div>
+  </div>
+</div>

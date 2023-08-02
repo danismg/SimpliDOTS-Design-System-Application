@@ -13,6 +13,8 @@ import { FlagDescComponent } from './flag-desc/flag-desc.component';
 import { FlagLongComponent } from './flag-long/flag-long.component';
 import { InlineHelperComponent } from './inline-helper/inline-helper.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { ProgressTrakerComponent } from './progress-traker/progress-traker.component';
+import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     FlagLongComponent,
     InlineHelperComponent,
     ProgressBarComponent,
+    ProgressTrakerComponent,
+    ProgressIndicatorComponent,
     // ListBreadcrumbsComponent,
   ],
   imports: [
@@ -46,6 +50,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     FlagLongComponent,
     InlineHelperComponent,
     ProgressBarComponent,
+    ProgressTrakerComponent,
+    ProgressIndicatorComponent,
   ],
 })
 export class ComponentsModule {}
