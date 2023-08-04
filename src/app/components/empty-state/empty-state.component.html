@@ -12,24 +12,20 @@
     <div class="empty__btns">
       <div class="empty__btn-top">
         <app-button
-          [color]="colorBtn.SUBTLE"
-          [spacing]="spacingBtn.DEFAULT"
+          *ngFor="let btnSetting of btnSettings"
+          [color]="btnSetting.color"
+          [spacing]="btnSetting.compact"
           (onClick)="goToGoogle()"
-          >Go To Google</app-button
-        >
-        <app-button
-          [color]="colorBtn.PRIMARY"
-          [spacing]="spacingBtn.DEFAULT"
-          (onClick)="goToGoogle()"
-          >Go To Google</app-button
+          >{{ btnSetting.title }}</app-button
         >
       </div>
 
       <app-button
-        [color]="colorBtn.LINK"
-        [spacing]="spacingBtn.DEFAULT"
+        *ngFor="let btnSetting of btnLinkSettings"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
         (onClick)="goToGoogle()"
-        >Go To Google</app-button
+        >{{ btnSetting.title }}</app-button
       >
     </div>
   </div>

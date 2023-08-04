@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FlagDescComponent } from './flag-desc.component';
+import { TextFieldComponent } from './text-field.component';
 
-describe('FlagDescComponent', () => {
-  let component: FlagDescComponent;
-  let fixture: ComponentFixture<FlagDescComponent>;
+describe('TextFieldComponent', () => {
+  let component: TextFieldComponent;
+  let fixture: ComponentFixture<TextFieldComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FlagDescComponent]
+      declarations: [TextFieldComponent]
     });
-    fixture = TestBed.createComponent(FlagDescComponent);
+    fixture = TestBed.createComponent(TextFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

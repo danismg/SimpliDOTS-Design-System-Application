@@ -1,9 +1,6 @@
 import { Component, Input } from '@angular/core';
+import ButtonSetting from 'src/app/models/ButtonSetting';
 import { BannerMode } from 'src/assets/beheviors/banner/BannerMode';
-
-import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
-import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
-
 @Component({
   selector: 'banner',
   templateUrl: './banner.component.html',
@@ -11,19 +8,12 @@ import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
 })
 export class BannerComponent {
   @Input() mode: BannerMode = BannerMode.INFO;
+  @Input() description: string = '';
+  @Input() btnSettings: ButtonSetting[] = [];
   hidden: boolean = true;
-  get colorBtn(): typeof ColorEnum {
-    return ColorEnum;
-  }
-  get spacingBtn(): typeof SpacingEnum {
-    return SpacingEnum;
-  }
+
   goToGoogle() {
     window.open('https://google.com', '_blank');
-  }
-
-  goToFacebook() {
-    window.open('https://facebook.com', '_blank');
   }
 
   getClassBg() {

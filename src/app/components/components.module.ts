@@ -8,13 +8,14 @@ import { ListBreadcrumbsModule } from './list-breadcrumbs/list-breadcrumbs.modul
 import { OnboardingModalComponent } from './onboarding-modal/onboarding-modal.component';
 import { EmptyStateComponent } from './empty-state/empty-state.component';
 import { BannerComponent } from './banner/banner.component';
-import { FlagComponent } from './flag/flag.component';
-import { FlagDescComponent } from './flag-desc/flag-desc.component';
-import { FlagLongComponent } from './flag-long/flag-long.component';
 import { InlineHelperComponent } from './inline-helper/inline-helper.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { ProgressTrakerComponent } from './progress-traker/progress-traker.component';
 import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
+import { SectionMessageComponent } from './section-message/section-message.component';
+import { TextFieldComponent } from './text-field/text-field.component';
+import { FlagLongComponent } from './flag-long/flag-long.component';
+import { FlagComponent } from './flag/flag.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,14 @@ import { ProgressIndicatorComponent } from './progress-indicator/progress-indica
     OnboardingModalComponent,
     EmptyStateComponent,
     BannerComponent,
-    FlagComponent,
-    FlagDescComponent,
     FlagLongComponent,
     InlineHelperComponent,
     ProgressBarComponent,
     ProgressTrakerComponent,
     ProgressIndicatorComponent,
+    SectionMessageComponent,
+    TextFieldComponent,
+    FlagComponent,
     // ListBreadcrumbsComponent,
   ],
   imports: [
@@ -45,13 +47,14 @@ import { ProgressIndicatorComponent } from './progress-indicator/progress-indica
     OnboardingModalComponent,
     EmptyStateComponent,
     BannerComponent,
-    FlagComponent,
-    FlagDescComponent,
     FlagLongComponent,
     InlineHelperComponent,
     ProgressBarComponent,
     ProgressTrakerComponent,
     ProgressIndicatorComponent,
+    SectionMessageComponent,
+    TextFieldComponent,
+    FlagComponent,
   ],
 })
 export class ComponentsModule {}

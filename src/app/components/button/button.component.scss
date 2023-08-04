@@ -116,7 +116,7 @@
 .btn-link,
 .ic__img-link,
 .ic__load-link {
-  background: white;
+  background: transparent;
   color: map-get($map: $link, $key: default);
   &:hover {
     background: var(--background-neutral-subtle-hover, #f4f5f7);

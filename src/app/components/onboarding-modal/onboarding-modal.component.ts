@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
-import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
+import { Component, Input } from '@angular/core';
+import ButtonSetting from 'src/app/models/ButtonSetting';
 
 @Component({
   selector: 'onboarding-modal',
@@ -8,17 +7,10 @@ import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
   styleUrls: ['./onboarding-modal.component.scss'],
 })
 export class OnboardingModalComponent {
-  get colorBtn(): typeof ColorEnum {
-    return ColorEnum;
-  }
-  get spacingBtn(): typeof SpacingEnum {
-    return SpacingEnum;
-  }
+  @Input() title: string = 'Text';
+  @Input() description: string = 'Text';
+  @Input() btnSettings: ButtonSetting[] = [];
   goToGoogle() {
     window.open('https://google.com', '_blank');
-  }
-
-  goToFacebook() {
-    window.open('https://facebook.com', '_blank');
   }
 }

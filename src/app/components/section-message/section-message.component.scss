@@ -1,0 +1,81 @@
+p {
+  margin: 0;
+}
+.slcMessage__card {
+  display: flex;
+  width: 624px;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 3px;
+}
+
+.slcMessage__card-info {
+  background: var(--background-info, #d2e9ff);
+  color: var(--text-info, #1e90ff);
+}
+.slcMessage__card-warning {
+  background: var(--background-warning, #fef0de);
+  color: var(--text-warning, #fba02e);
+}
+.slcMessage__card-danger {
+  background: var(--background-danger, #ffedeb);
+  color: var(--text-danger, #e81a3e);
+}
+.slcMessage__card-succes {
+  background: var(--background-succes, #dffcf0);
+  color: var(--text-success, #08ac9c);
+}
+.slcMessage__card-discovery {
+  background: var(--background-discorvery, #d2e9ff);
+  color: var(--text-discovery, #8b85db);
+}
+
+.slcMessage__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.slcMessage__title {
+  align-self: stretch;
+  /* Body/Med */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+}
+.slcMessage__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  flex: 1 0 0;
+
+  /* Body/Reg */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+
+.slcMessage__btns {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.slcMessage__icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  // padding: 4px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}

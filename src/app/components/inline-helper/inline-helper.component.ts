@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'inline-helper',
   templateUrl: './inline-helper.component.html',
   styleUrls: ['./inline-helper.component.scss'],
 })
-export class InlineHelperComponent {}
+export class InlineHelperComponent {
+  @Input() title: string = 'Title';
+}

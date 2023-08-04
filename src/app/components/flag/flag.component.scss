@@ -35,6 +35,13 @@
   align-items: flex-start;
   align-self: stretch;
 }
+.flag__container-down {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  padding-left: 32px;
+  flex-direction: column;
+}
 
 .flag__title {
   display: flex;
@@ -44,7 +51,25 @@
   flex: 1 0 0;
   align-items: center;
 
-  @include body-med;
+  /* Body/Med */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+}
+
+.flag__desc {
+  align-self: stretch !important;
+  text-align: start;
+  margin: 0;
+
+  /* Body/Reg */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
 }
 
 .flag__title-default,
@@ -88,4 +113,12 @@
   height: 16px;
   justify-content: enter;
   align-items: center;
+}
+
+.flag__button-list {
+  display: flex;
+  padding-top: 8px;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
 }

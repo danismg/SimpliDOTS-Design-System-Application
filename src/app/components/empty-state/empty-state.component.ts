@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
-import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
+import { Component, Input } from '@angular/core';
+import ButtonSetting from 'src/app/models/ButtonSetting';
 
 @Component({
   selector: 'empty-state',
@@ -8,12 +7,11 @@ import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
   styleUrls: ['./empty-state.component.scss'],
 })
 export class EmptyStateComponent {
-  get colorBtn(): typeof ColorEnum {
-    return ColorEnum;
-  }
-  get spacingBtn(): typeof SpacingEnum {
-    return SpacingEnum;
-  }
+  @Input() title: string = '';
+  @Input() description: string = '';
+  @Input() btnSettings: ButtonSetting[] = [];
+  @Input() btnLinkSettings: ButtonSetting[] = [];
+
   goToGoogle() {
     window.open('https://google.com', '_blank');
   }

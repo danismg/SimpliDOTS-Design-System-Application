@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { ColorStatus } from 'src/assets/beheviors/label-status/ColorStatus';
+import { ColorStatus } from 'src/assets/beheviors/flag/label-status/ColorStatus';
 @Component({
   selector: 'status-table',
   templateUrl: './status-table.component.html',

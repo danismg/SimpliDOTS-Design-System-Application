@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import ProgressTrakerSetting from 'src/app/models/ProgressTrakerSetting';
+import { ProgressTrakerMode } from 'src/assets/beheviors/progress-traker/ProgressTrakerMode';
 
 @Component({
   selector: 'progress-traker',
@@ -7,26 +8,13 @@ import ProgressTrakerSetting from 'src/app/models/ProgressTrakerSetting';
   styleUrls: ['./progress-traker.component.scss'],
 })
 export class ProgressTrakerComponent {
-  @Input() settings: ProgressTrakerSetting[] = [
-    {
-      id: 1,
-      title: 'Label',
-      description: 'Description',
-    },
-    {
-      id: 2,
-      title: 'Label1',
-      description: 'Description1',
-    },
-    {
-      id: 3,
-      title: 'Label2',
-      description: 'Description2',
-    },
-    {
-      id: 4,
-      title: 'Label3',
-      description: 'Description3',
-    },
-  ];
+  @Input() settings: ProgressTrakerSetting[] = [];
+  @Output() onClick: EventEmitter<any> = new EventEmitter<any>();
+
+  mode!: ProgressTrakerMode;
+
+  handleClick() {
+    this.mode = ProgressTrakerMode.SELECTED;
+    this.onClick.emit();
+  }
 }

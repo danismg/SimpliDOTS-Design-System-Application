@@ -16,24 +16,31 @@
         <table>
           <thead>
             <tr>
-              <th style="width: 1fr; color: red">Component</th>
               <th style="width: 1fr"></th>
+              <th style="width: 1fr; color: red">Component</th>
               <th style="width: 3fr; color: red">View</th>
             </tr>
           </thead>
           <tbody>
+            <!-- Label Status -->
             <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
               <th style="width: 1fr">Label Status</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
                 <status-table [color]="ColorStatus.DEFAULT"
                   >Labell</status-table
                 >
               </th>
             </tr>
+
+            <!-- Button -->
             <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
               <th style="width: 1fr">Button</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
                 <app-button
                   [color]="colorBtn.PRIMARY"
@@ -43,43 +50,81 @@
                 >
               </th>
             </tr>
+
+            <!-- Label Priority -->
             <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
               <th style="width: 1fr">Label Priority</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
                 <label-priority [circle]="cirleLabel.DEFAULT"
                   >Labell</label-priority
                 >
               </th>
             </tr>
+
+            <!-- Breadcrumbs -->
             <tr>
+              <th style="width: 1fr">
+                <!-- <img src="./../assets/icon/info/ic-success.svg" alt="" /> -->
+              </th>
               <th style="width: 1fr">Breadcrumbs</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr"></th>
             </tr>
+
+            <!-- OnBoarding Modal -->
             <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
               <th style="width: 1fr">OnBoarding Modal</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
-                <onboarding-modal></onboarding-modal>
+                <onboarding-modal
+                  [title]="'This is the modal’s header'"
+                  [description]="
+                    'Additional information that will help users understand the modal.'
+                  "
+                  [btnSettings]="btn__OnBoardingModalSettings"
+                ></onboarding-modal>
               </th>
             </tr>
+
+            <!-- Empty State -->
             <tr>
+              <th style="width: 1fr">
+                <img src="./../assets/icon/info/ic-success.svg" alt="" />
+              </th>
               <th style="width: 1fr">Empty State</th>
-              <th style="width: 1fr"></th>
-              <th style="width: 3fr"><empty-state></empty-state></th>
-            </tr>
-            <tr>
-              <th style="width: 1fr">Banner</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
-                <!-- <banner [mode]="modeBanner.WARNING" [btnText]="test"></banner> -->
-                <banner [mode]="modeBanner.WARNING">Button</banner>
+                <empty-state
+                  [title]="'This is the empty state’s title'"
+                  [description]="
+                    'Additional information that will help users understand the empty state.'
+                  "
+                  [btnLinkSettings]="btnLink__EmptyStateSettings"
+                  [btnSettings]="btn__EmptyStateSettings"
+                ></empty-state>
+              </th>
+            </tr>
+
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Banner</th>
+              <th style="width: 3fr">
+                <banner
+                  [description]="
+                    'https://www.figma.com/file/NT3D9te85pcox2j0MXvbR7igma.com/file/https://www.figma.com/file/NT3D9te85pcox2j0MXvbR7igma.com/file/'
+                  "
+                  [mode]="modeBanner.WARNING"
+                  [btnSettings]="btn__BannerSettings"
+                  >Button</banner
+                >
               </th>
             </tr>
             <tr>
+              <th></th>
               <th style="width: 1fr">Flag</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
                 <flag
                   [color]="colorFlag.DEFAULT"
@@ -88,48 +133,79 @@
               </th>
             </tr>
             <tr>
+              <th></th>
               <th style="width: 1fr">Flag Description</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
-                <flag-desc
+                <flag
                   [color]="colorFlag.DEFAULT"
                   [icon]="iconFlag.IMAGE"
-                ></flag-desc>
+                  [btnSettings]="btn__FlagSettings"
+                  [title]="'kadsfkads'"
+                  [description]="
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloremque molestiae minus ad suscipit iste.'
+                  "
+                ></flag>
               </th>
             </tr>
             <tr>
+              <th></th>
               <th style="width: 1fr">Flag Long</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
                 <flag-long></flag-long>
               </th>
             </tr>
             <tr>
+              <th></th>
               <th style="width: 1fr">Inline Helper</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
-                <inline-helper></inline-helper>
+                <inline-helper [title]="'Title'">
+                  <div class="Example__Component"></div>
+                </inline-helper>
               </th>
             </tr>
             <tr>
+              <th></th>
               <th style="width: 1fr">Progress Bar</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
-                <progress-bar></progress-bar>
+                <progress-bar [settings]="progressBarSettings"></progress-bar>
               </th>
             </tr>
             <tr>
+              <th></th>
               <th style="width: 1fr">Progress Traker</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
-                <progress-traker></progress-traker>
+                <progress-traker
+                  [settings]="progressTrakerSettings"
+                ></progress-traker>
               </th>
             </tr>
             <tr>
+              <th></th>
               <th style="width: 1fr">Progress Indicator</th>
-              <th style="width: 1fr"></th>
               <th style="width: 3fr">
                 <progress-indicator></progress-indicator>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Section Message</th>
+              <th style="width: 3fr">
+                <section-message
+                  [title]="'Title'"
+                  [description]="
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus est quam, eu suscipit mi aliquet vel. Praesent nec sollicitudin nulla.'
+                  "
+                  [color]="colorSctMessage.WARNING"
+                  [icon]="iconSctMessage.WARNING"
+                  [btnSettings]="btn__SctMessageSettings"
+                ></section-message>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Text Field</th>
+              <th style="width: 3fr">
+                <text-field [input]="inputTextField.LEFT"></text-field>
               </th>
             </tr>
           </tbody>

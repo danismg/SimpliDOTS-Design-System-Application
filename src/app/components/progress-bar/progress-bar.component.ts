@@ -7,44 +7,7 @@ import ProgressBarSetting from 'src/app/models/ProgressBarSetting';
   styleUrls: ['./progress-bar.component.scss'],
 })
 export class ProgressBarComponent {
-  @Input() settings: ProgressBarSetting[] = [
-    {
-      size: 50,
-      color: 'red',
-    },
-    {
-      size: 50,
-      color: '#23ef45',
-    },
-    {
-      size: 30,
-      color: 'yellow',
-    },
-    {
-      size: 50,
-      color: 'red',
-    },
-    {
-      size: 50,
-      color: '#23ef45',
-    },
-    {
-      size: 30,
-      color: 'yellow',
-    },
-    {
-      size: 50,
-      color: 'red',
-    },
-    {
-      size: 50,
-      color: '#23ef45',
-    },
-    {
-      size: 30,
-      color: 'yellow',
-    },
-  ];
+  @Input() settings: ProgressBarSetting[] = [];
 
   get totalSize(): number {
     return this.settings.reduce((res, setting) => (res += setting.size), 0);

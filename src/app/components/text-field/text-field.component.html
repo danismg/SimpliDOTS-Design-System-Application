@@ -1,0 +1,15 @@
+<div class="text-field">
+  <div
+    *ngIf="getClassPersen() == 'persen-left'"
+    class="text-field__persen persen-right"
+  >
+    <p>%</p>
+  </div>
+  <input placeholder="Placeholder" [class]="getClassInput()" type="text" />
+  <div
+    *ngIf="getClassPersen() == 'persen-righ'"
+    class="text-field__persen persen-right"
+  >
+    <p>%</p>
+  </div>
+</div>

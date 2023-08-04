@@ -1,14 +1,21 @@
 .trackers__titles {
-  display: inline-flex;
+  display: flex;
   padding: 8px;
   align-items: center;
   gap: 8px;
   border-radius: 4px;
   width: max-content;
+  text-align: start;
 
   &:hover {
     background-color: var(--background-neutral-subtle-hover, #f4f5f7);
   }
+}
+
+.trackers__titles-hover,
+.trackers__titles-disabled,
+.trackers__titles-selected {
+  background-color: var(--background-neutral-subtle-hover, #f4f5f7);
 }
 
 .trackers-ic-number {
@@ -71,6 +78,27 @@
   font-style: normal;
   font-weight: 400;
   line-height: 16px; /* 133.333% */
+}
+
+.divider {
+  display: flex;
+  width: 24px;
+  min-height: 78px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: transparent;
+}
+.divider-line {
+  width: 2px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  background: var(--border-default, #dfe1e6);
+}
+.divider-line-none {
+  background: transparent !important;
 }
 
 .trackers__selected {

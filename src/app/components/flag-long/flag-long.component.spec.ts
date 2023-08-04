@@ -8,7 +8,7 @@ describe('FlagLongComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FlagLongComponent]
+      declarations: [FlagLongComponent],
     });
     fixture = TestBed.createComponent(FlagLongComponent);
     component = fixture.componentInstance;

@@ -4,18 +4,18 @@
       <img [src]="getSRC()" alt="" [hidden]="iconBanner()" />
       <div [class]="getClassText()">
         <p class="banner__text">
-          https://www.figma.com/file/NT3D9te85pcox2j0MXvbR7igma.com/file/https://www.figma.com/file/NT3D9te85pcox2j0MXvbR7igma.com/file/
+          {{ description }}
         </p>
       </div>
     </div>
 
     <app-button
-      [color]="colorBtn.DEFAULT"
-      [spacing]="spacingBtn.DEFAULT"
+      *ngFor="let btnSetting of btnSettings"
+      [color]="btnSetting.color"
+      [spacing]="btnSetting.compact"
       (onClick)="goToGoogle()"
-      >Button</app-button
+      >{{ btnSetting.title }}</app-button
     >
-    <!-- >{{ txtBtn }}</app-button -->
   </div>
   <img src="./../../../assets/icon/info/ic-exit.svg" alt="" />
 </div>
