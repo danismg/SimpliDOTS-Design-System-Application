@@ -1,0 +1,22 @@
+<div [class]="getClassNames()">
+  <div class="slcMessage__left">
+    <img class="slcMessage__icon" [src]="getClassIcons()" alt="" />
+  </div>
+  <div class="slcMessage__right">
+    <div class="slcMessage__title">{{ title }}</div>
+    <div class="slcMessage__desc">
+      <p>
+        {{ description }}
+      </p>
+    </div>
+    <div class="slcMessage__btns">
+      <app-button
+        *ngFor="let btnSetting of btnSettings"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="goToGoogle()"
+        >{{ btnSetting.title }}</app-button
+      >
+    </div>
+  </div>
+</div>
