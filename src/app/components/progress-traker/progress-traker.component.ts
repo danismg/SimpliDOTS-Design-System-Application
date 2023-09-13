@@ -1,6 +1,17 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ElementRef,
+  HostListener,
+  ViewChild,
+} from '@angular/core';
 import ProgressTrakerSetting from 'src/app/models/ProgressTrakerSetting';
-import { ProgressTrakerMode } from 'src/assets/beheviors/progress-traker/ProgressTrakerMode';
+import {
+  ProgressTrakerCondition,
+  ProgressTrakerMode,
+} from 'src/assets/beheviors/progress-traker/ProgressTrakerMode';
 
 @Component({
   selector: 'progress-traker',
@@ -9,12 +20,36 @@ import { ProgressTrakerMode } from 'src/assets/beheviors/progress-traker/Progres
 })
 export class ProgressTrakerComponent {
   @Input() settings: ProgressTrakerSetting[] = [];
-  @Output() onClick: EventEmitter<any> = new EventEmitter<any>();
+  @Output() trackerClick: EventEmitter<ProgressTrakerSetting> =
+    new EventEmitter<ProgressTrakerSetting>();
+  @ViewChild('targetDiv') targetDiv!: ElementRef;
 
-  mode!: ProgressTrakerMode;
+  get progressTrackerMode(): typeof ProgressTrakerMode {
+    return ProgressTrakerMode;
+  }
 
-  handleClick() {
-    this.mode = ProgressTrakerMode.SELECTED;
-    this.onClick.emit();
+  noActive(): void {
+    console.log('Focus Is Lost for this Element');
+  }
+
+  handleClick(key: ProgressTrakerSetting) {
+    this.settings.forEach((setting) => {
+      setting.mode = ProgressTrakerMode.DEFAULT;
+      if (key.mode === ProgressTrakerMode.DEFAULT) {
+        key.mode = ProgressTrakerMode.SELECTED;
+      }
+    });
+
+    this.trackerClick.emit(key);
+  }
+
+  changeMode(mode: ProgressTrakerMode) {
+    return `trackers__ic-number trackers__left trackers__left-${ProgressTrakerMode[
+      mode
+    ].toLowerCase()}`;
+  }
+
+  changeColorBg(color: ProgressTrakerMode) {
+    return `trackers__titles-${ProgressTrakerMode[color].toLowerCase()}`;
   }
 }

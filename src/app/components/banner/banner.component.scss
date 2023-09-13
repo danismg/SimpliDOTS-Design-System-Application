@@ -3,12 +3,11 @@
 
 .banner {
   display: flex;
-  max-width: 730px !important;
+  width: max-content;
   padding: 8px 40px;
-  justify-content: center;
   align-items: center;
-  gap: 4px;
-  width: 730px;
+  gap: 8px;
+  // width: 730px;
 }
 
 .banner-warning {
@@ -66,4 +65,9 @@
   padding: 6px 12px;
   align-items: center;
   gap: 10px;
+}
+
+.ic-exit {
+  justify-content: end;
+  // margin-left: 4px;
 }

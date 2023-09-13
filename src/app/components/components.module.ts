@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 import { PriorityComponent } from './priority/priority.component';
 import { StatusTableComponent } from './status-table/status-table.component';
-import { ListBreadcrumbsComponent } from './list-breadcrumbs/list-breadcrumbs.component';
-import { ListBreadcrumbsModule } from './list-breadcrumbs/list-breadcrumbs.module';
 import { OnboardingModalComponent } from './onboarding-modal/onboarding-modal.component';
 import { EmptyStateComponent } from './empty-state/empty-state.component';
 import { BannerComponent } from './banner/banner.component';
@@ -16,6 +14,11 @@ import { SectionMessageComponent } from './section-message/section-message.compo
 import { TextFieldComponent } from './text-field/text-field.component';
 import { FlagLongComponent } from './flag-long/flag-long.component';
 import { FlagComponent } from './flag/flag.component';
+import { TextareaComponent } from './textarea/textarea.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { FormsModule } from '@angular/forms';
+import { ListBreadcrumbsComponent } from './list-breadcrumbs/list-breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -33,17 +36,17 @@ import { FlagComponent } from './flag/flag.component';
     SectionMessageComponent,
     TextFieldComponent,
     FlagComponent,
-    // ListBreadcrumbsComponent,
+    TextareaComponent,
+    PaginationComponent,
+    CheckboxComponent,
+    ListBreadcrumbsComponent,
   ],
-  imports: [
-    CommonModule,
-    // ListBreadcrumbsModule
-  ],
+  imports: [CommonModule, FormsModule],
   exports: [
     ButtonComponent,
     PriorityComponent,
     StatusTableComponent,
-    // ListBreadcrumbsComponent,
+    ListBreadcrumbsComponent,
     OnboardingModalComponent,
     EmptyStateComponent,
     BannerComponent,
@@ -55,6 +58,9 @@ import { FlagComponent } from './flag/flag.component';
     SectionMessageComponent,
     TextFieldComponent,
     FlagComponent,
+    TextareaComponent,
+    PaginationComponent,
+    CheckboxComponent,
   ],
 })
 export class ComponentsModule {}

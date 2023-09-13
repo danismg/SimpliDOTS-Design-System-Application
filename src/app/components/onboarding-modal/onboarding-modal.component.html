@@ -1,24 +1,27 @@
-<div class="onBoarding-modal">
-  <div class="onBoarding-modal__container">
-    <div class="onBoarding-modal__top">
-      <img
-        src="./../../../assets/icon/onboarding/onboarding-modal.svg"
-        alt=""
-      />
-    </div>
-    <div class="onBoarding-modal__down">
-      <div class="onBoarding-modal__content">
-        <div class="onBoarding-modal__title">{{ title }}</div>
-        <div class="onBoarding-modal__desc">{{ description }}</div>
+<div *ngIf="show === true">
+  <div
+    *ngIf="showStyle() || show === true"
+    [ngStyle]="{ backgroundColor: colorBg }"
+    class="onBoarding-modal"
+  >
+    <div class="onBoarding-modal__container">
+      <div *ngIf="showStyle()" class="onBoarding-modal__top" [hidden]="">
+        <img [src]="getIconNames()" alt="" />
       </div>
-      <div class="onBoarding-modal__btns">
-        <app-button
-          *ngFor="let btnSetting of btnSettings"
-          [color]="btnSetting.color"
-          [spacing]="btnSetting.compact"
-          (onClick)="goToGoogle()"
-          >{{ btnSetting.title }}</app-button
-        >
+      <div class="onBoarding-modal__down">
+        <div class="onBoarding-modal__content">
+          <div class="onBoarding-modal__title">{{ title }}</div>
+          <div class="onBoarding-modal__desc">{{ description }}</div>
+        </div>
+        <div class="onBoarding-modal__btns">
+          <app-button
+            *ngFor="let btnSetting of btnSettings"
+            [color]="btnSetting.color"
+            [spacing]="btnSetting.compact"
+            (onClick)="funcButton(btnSetting)"
+            >{{ btnSetting.title }}</app-button
+          >
+        </div>
       </div>
     </div>
   </div>

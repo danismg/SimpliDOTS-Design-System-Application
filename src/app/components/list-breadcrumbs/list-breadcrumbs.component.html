@@ -1,5 +1,18 @@
 <div class="breadcr__lists">
-  <!-- <app-breadcrumb [class]="getClassName()"> Label</app-breadcrumb>
-  <app-breadcrumb [class]="getClassName()"> Label</app-breadcrumb>
-  <app-breadcrumb [class]="getClassName()"> Label</app-breadcrumb> -->
+  <div class="breadcr__item" *ngFor="let setting of listBreadCrumbsSettings">
+    <div
+      class="breadcr__texts"
+      *ngIf="setting !== listBreadCrumbsSettings.length"
+    >
+      <a [class]="getClassName()" href=""> {{ setting.location }} / </a>
+    </div>
+  </div>
 </div>
+
+<!--  search index for ngfor -->
+<!-- <div
+      class="breadcr__texts"
+      *ngIf="setting.id === listBreadCrumbsSettings.length"
+    >
+      <a [class]="getClassName()" href=""> /{{ setting.location }}</a>
+    </div> -->

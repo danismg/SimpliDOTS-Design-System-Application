@@ -14,6 +14,14 @@ import ProgressBarSetting from './models/ProgressBarSetting';
 import ButtonSetting from './models/ButtonSetting';
 import ProgressTrakerSetting from './models/ProgressTrakerSetting';
 import { ProgressTrakerMode } from 'src/assets/beheviors/progress-traker/ProgressTrakerMode';
+import {
+  textareaMode,
+  textareaSize,
+} from 'src/assets/beheviors/textarea/textareaMode';
+import InfoFlagLongSetting from './models/InfoFlagLongSetting';
+import ProgressIndicatorSetting from './models/ProgressIndicatorSetting';
+import PaginationSetting from './models/PaginationSetting';
+import BreadCrumbsSetting from './models/BreadCrumbsSetting';
 
 @Component({
   selector: 'app-root',
@@ -23,34 +31,52 @@ import { ProgressTrakerMode } from 'src/assets/beheviors/progress-traker/Progres
 export class AppComponent {
   title = 'design-system';
 
+  // Show On / Show off
+  showFlag: boolean = true;
+
   // Storage Components
   progressBarSettings: ProgressBarSetting[] = [];
+  breadCrumbsSettings: BreadCrumbsSetting[] = [];
   progressTrakerSettings: ProgressTrakerSetting[] = [];
+  progressIndicatorSettings: ProgressIndicatorSetting[] = [];
+  infoFlagLongSettings: InfoFlagLongSetting[] = [];
+  paginationSettings: PaginationSetting[] = [];
 
   // Storage Button List with some Component
   btn__FlagSettings: ButtonSetting[] = [];
+  btn__FlagLongSettings: ButtonSetting[] = [];
   btn__SctMessageSettings: ButtonSetting[] = [];
   btn__Settings: ButtonSetting[] = [];
   btn__BannerSettings: ButtonSetting[] = [];
   btn__EmptyStateSettings: ButtonSetting[] = [];
   btnLink__EmptyStateSettings: ButtonSetting[] = [];
   btn__OnBoardingModalSettings: ButtonSetting[] = [];
+  btn__ProgressIndicatorSettings: ButtonSetting[] = [];
+  btn__PaginationSettings: ButtonSetting[] = [];
 
   ngOnInit(): void {
     this.progressBarSettings = this.getProgressBarSettings();
+    this.breadCrumbsSettings = this.getBreadCrumbsSettings();
+    this.progressIndicatorSettings = this.getProgressIndicatorSettings();
     this.progressTrakerSettings = this.getProgressTrakerSettings();
+    this.infoFlagLongSettings = this.getInfoFlagLongSettings();
 
     // Button List with some Component
-    this.btn__EmptyStateSettings = this.getButton__EmptyStateSetting();
-    this.btnLink__EmptyStateSettings = this.getButtonLink_EmptyStateSetting();
+    this.btn__EmptyStateSettings = this.getButton__EmptyStateSettings();
+    this.btnLink__EmptyStateSettings = this.getButtonLink_EmptyStateSettings();
 
-    this.btn__FlagSettings = this.getButton__FlagSetting();
-    this.btn__SctMessageSettings = this.getButton__SctMessageSetting();
-    this.btn__BannerSettings = this.getButton__BannerSetting();
+    this.btn__FlagSettings = this.getButton__FlagSettings();
+    this.btn__FlagLongSettings = this.getButton__FlagLongSettings();
+    this.btn__SctMessageSettings = this.getButton__SctMessageSettings();
+    this.btn__BannerSettings = this.getButton__BannerSettings();
     this.btn__OnBoardingModalSettings = this.getButton__BoardingModalSettings();
+    this.btn__ProgressIndicatorSettings =
+      this.getButton__ProgressIndicatorSettings();
+    this.btn__PaginationSettings = this.getButton__PaginationSettings();
   }
 
-  getButton__FlagSetting(): ButtonSetting[] {
+  // Store button every Component
+  getButton__FlagSettings(): ButtonSetting[] {
     return [
       {
         title: 'No Thanks',
@@ -64,7 +90,30 @@ export class AppComponent {
       },
     ];
   }
-  getButton__SctMessageSetting(): ButtonSetting[] {
+  getButton__PaginationSettings(): ButtonSetting[] {
+    return [
+      {
+        title: '',
+        color: ColorEnum.SUBTLE,
+        compact: SpacingEnum.COMPACT,
+      },
+    ];
+  }
+  getButton__FlagLongSettings(): ButtonSetting[] {
+    return [
+      {
+        title: 'Delete',
+        color: ColorEnum.SECONDARY,
+        compact: SpacingEnum.DEFAULT,
+      },
+      {
+        title: 'Move',
+        color: ColorEnum.PRIMARY,
+        compact: SpacingEnum.DEFAULT,
+      },
+    ];
+  }
+  getButton__SctMessageSettings(): ButtonSetting[] {
     return [
       {
         title: 'Button',
@@ -72,14 +121,14 @@ export class AppComponent {
         compact: SpacingEnum.COMPACT,
       },
       {
-        title: 'Button',
+        title: 'Button1',
         color: ColorEnum.LINK,
         compact: SpacingEnum.COMPACT,
       },
     ];
   }
 
-  getButton__BannerSetting(): ButtonSetting[] {
+  getButton__BannerSettings(): ButtonSetting[] {
     return [
       {
         title: 'Button',
@@ -89,7 +138,7 @@ export class AppComponent {
     ];
   }
 
-  getButton__EmptyStateSetting(): ButtonSetting[] {
+  getButton__EmptyStateSettings(): ButtonSetting[] {
     return [
       {
         title: 'Button 1',
@@ -103,7 +152,7 @@ export class AppComponent {
       },
     ];
   }
-  getButtonLink_EmptyStateSetting(): ButtonSetting[] {
+  getButtonLink_EmptyStateSettings(): ButtonSetting[] {
     return [
       {
         title: 'Link',
@@ -120,15 +169,46 @@ export class AppComponent {
         color: ColorEnum.SUBTLE,
         compact: SpacingEnum.DEFAULT,
       },
+    ];
+  }
+
+  getButton__ProgressIndicatorSettings(): ButtonSetting[] {
+    return [
       {
-        title: 'Confirm',
+        title: 'Batal',
+        color: ColorEnum.SUBTLE,
+        compact: SpacingEnum.COMPACT,
+      },
+      {
+        title: 'Simpan Kriteria',
         color: ColorEnum.PRIMARY,
         compact: SpacingEnum.DEFAULT,
       },
     ];
   }
 
+  ////////////////////////////////////////////
+
   // Storage Components Func
+
+  getBreadCrumbsSettings() {
+    return [
+      {
+        location: 'balbla',
+        link: 'jhdfasd'
+      },
+      {
+        location: 'balbla',
+      },
+      {
+        location: 'balbla',
+      },
+      {
+        location: 'balbla',
+      },
+    ];
+  }
+
   getProgressBarSettings(): ProgressBarSetting[] {
     return [
       {
@@ -169,6 +249,49 @@ export class AppComponent {
       },
     ];
   }
+  getInfoFlagLongSettings(): InfoFlagLongSetting[] {
+    return [
+      {
+        info: 'Additional Info',
+      },
+      {
+        info: 'Additional Info',
+      },
+    ];
+  }
+
+  getProgressIndicatorSettings(): ProgressIndicatorSetting[] {
+    return [
+      {
+        id: 1,
+        title: 'Label',
+        description: 'Description',
+        visited: true,
+        line: true,
+      },
+      {
+        id: 2,
+        title: 'Label1',
+        description: 'Description1',
+        visited: true,
+        line: true,
+      },
+      {
+        id: 3,
+        title: 'Label2',
+        description: 'Description2',
+        visited: true,
+        line: true,
+      },
+      {
+        id: 4,
+        title: 'Label3',
+        description: 'Description3',
+        visited: true,
+        line: true,
+      },
+    ];
+  }
 
   getProgressTrakerSettings(): ProgressTrakerSetting[] {
     return [
@@ -177,7 +300,7 @@ export class AppComponent {
         title: 'Label',
         description: 'Description',
         mode: ProgressTrakerMode.DEFAULT,
-        visited: true,
+        visited: false,
       },
       {
         id: 2,
@@ -196,7 +319,7 @@ export class AppComponent {
       {
         id: 4,
         title: 'Label3',
-        description: '',
+        description: 'Description3',
         mode: ProgressTrakerMode.DEFAULT,
         visited: false,
       },
@@ -234,11 +357,105 @@ export class AppComponent {
   get inputTextField(): typeof TextFieldInput {
     return TextFieldInput;
   }
-
-  goToGoogle() {
-    window.open('https://google.com', '_blank');
+  get sizeTextArea(): typeof textareaSize {
+    return textareaSize;
+  }
+  get modeTextArea(): typeof textareaMode {
+    return textareaMode;
   }
 
+  ////////////////////////////////////////
+
+  // PROGRESS TRACKER
+  trackerVisible: boolean = false;
+  labelName: string = '';
+  showComponentTracker(key: ProgressTrakerSetting) {
+    this.progressTrakerSettings.forEach((progressTrakerSetting) => {
+      if (key.title === progressTrakerSetting.title) this.trackerVisible = true;
+      this.labelName = key.title;
+    });
+    this.progressTrakerSettings.forEach((progressTrakerSetting) => {
+      if (key.title === progressTrakerSetting.title) this.trackerVisible = true;
+      this.labelName = key.title;
+    });
+  }
+
+  // Pagination
+  sizePagination!: number; // panjang table
+
+  ////////////////////////////////////////////
+
+  // Fungsi tiap button pada Components
+  funcButton(key: ColorEnum) {
+    if (key === ColorEnum.PRIMARY) {
+      // ngapai
+    } else if (key === ColorEnum.SECONDARY) {
+      // ngapai
+    } else if (key === ColorEnum.DEFAULT) {
+      // ngapai
+    } else if (key === ColorEnum.SUBTLE) {
+      // ngapai
+    } else if (key === ColorEnum.LINK) {
+      // ngapai
+    }
+  }
+  funcButtonFlagLong(key: ColorEnum) {
+    if (key === ColorEnum.PRIMARY) {
+      // ngapai
+    } else if (key === ColorEnum.SECONDARY) {
+      // ngapai
+    } else if (key === ColorEnum.DEFAULT) {
+      this.showFlag = false;
+    } else if (key === ColorEnum.SUBTLE) {
+      // ngapai
+    } else if (key === ColorEnum.LINK) {
+      // ngapai
+    }
+  }
+  funcButtonProgressIndicator(key: ButtonSetting) {
+    if (key.color === ColorEnum.PRIMARY) {
+      // ngapai
+    } else if (key.color === ColorEnum.SECONDARY) {
+      // ngapai
+    } else if (key.color === ColorEnum.DEFAULT) {
+      this.showFlag = false;
+    } else if (key.color === ColorEnum.SUBTLE) {
+      // ngapai
+    } else if (key.color === ColorEnum.LINK) {
+      // ngapai
+    }
+  }
+
+  funcButtonFlag(key: ButtonSetting) {
+    if (
+      key.color === ColorEnum.PRIMARY &&
+      key.title === 'Join the conversation'
+    ) {
+      this.showFlag = false;
+    } else if (key.color === ColorEnum.PRIMARY && key.title === 'Understood') {
+      this.showFlag = false;
+    } else if (key.color === ColorEnum.SECONDARY) {
+      // ngapai
+    } else if (
+      key.color === ColorEnum.DEFAULT &&
+      key.title === 'Join the conversation'
+    ) {
+      this.showFlag = false;
+    } else if (key.color === ColorEnum.SUBTLE) {
+      // ngapai
+    } else if (key.color === ColorEnum.LINK) {
+      // ngapai
+    }
+  }
+  funcButtonSctMessage(key: string) {
+    if (key === 'button') {
+      // ngapai
+    } else if (key === 'button') {
+      // ngapai
+    }
+  }
+
+  // Fungsi button sendiri
   goToFacebook() {
     window.open('https://facebook.com', '_blank');
   }

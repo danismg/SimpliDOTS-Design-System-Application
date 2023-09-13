@@ -1,0 +1,204 @@
+<div class="temp__container">
+  <div class="pagination__container">
+    <div class="pagination__container-left">
+      <div class="pagination__item-top">
+        <p>Show</p>
+        <div class="pagination__dropdown">
+          <div class="pagination__dropdown-select">
+            <span class="pagination__dropdown-selected">10</span>
+            <div class="pagination__arrow">
+              <img src="./assets/arrow.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <p>entries</p>
+      </div>
+      <div class="pagination__item-down">
+        <p>Showing</p>
+        <p>1</p>
+        <p>to</p>
+        <p>{{ totalpages }}</p>
+        <p>of</p>
+        <p>{{ totalpages }}</p>
+        <p>entries</p>
+      </div>
+    </div>
+    <div class="pagination__container-right">
+      <!-- <a href="" class="pagination__nav">First</a>
+      <a href="" class="pagination__nav pagination__nav-disabled">Previous</a> -->
+
+      <!-- <button [disabled]="value.page === 1" (click)="selectPage(1)">
+          <<
+        </button> -->
+      <app-button
+        *ngFor="let btnSetting of btnSettings"
+        [padding]="'0px 12px'"
+        [mode]="HandleButtonMode('First')"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="funcButton(btnSetting, 1)"
+        >First</app-button
+      >
+
+      <app-button
+        *ngFor="let btnSetting of btnSettings"
+        [padding]="'0px 12px'"
+        [mode]="HandleButtonMode('Previous')"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="funcButton(btnSetting, page - 1)"
+        >Previous</app-button
+      >
+      <app-button
+        *ngFor="let btnSetting of btnSettings"
+        [mode]="HandleButtonMode('First')"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="funcButton(btnSetting, 1)"
+        >1</app-button
+      >
+
+      <div style="display: flex; flex-direction: row; width: max-content">
+        <div *ngFor="let item of midlepagelarge">
+          <app-button
+            *ngFor="let btnSetting of btnSettings"
+            [mode]="HandleButtonMode('dfsa')"
+            [color]="btnSetting.color"
+            [spacing]="btnSetting.compact"
+            (onClick)="funcButton(btnSetting, 1)"
+            >{{ HandlePagination(1) }}</app-button
+          >
+        </div>
+      </div>
+
+      <!-- <div
+        style="display: flex; flex-direction: row; width: max-content"
+        *ngIf="page < 5 && totalpages <= 5"
+      >
+        <app-button
+          *ngFor="let btnSetting of btnSettings"
+          [mode]="HandleButtonMode('First')"
+          [color]="btnSetting.color"
+          [spacing]="btnSetting.compact"
+          (onClick)="funcButton(btnSetting, 1)"
+          >...</app-button
+        >
+        <div *ngFor="let item of midlepagesmall">
+          <app-button
+            *ngFor="let btnSetting of btnSettings"
+            [mode]="HandleButtonMode('First')"
+            [color]="btnSetting.color"
+            [spacing]="btnSetting.compact"
+            (onClick)="funcButton(btnSetting, 1)"
+            >{{ HandlePagination(-1) }}</app-button
+          >
+        </div>
+      </div> -->
+      <!-- 
+      <div *ngIf="page > 5 && totalpages >= 5">
+        <app-button
+          ngIf=""
+          *ngFor="let btnSetting of btnSettings"
+          [mode]="HandleButtonMode('dfasd')"
+          [color]="btnSetting.color"
+          [spacing]="btnSetting.compact"
+          (onClick)="funcButton(btnSetting, 0)"
+          >...</app-button
+        >
+        <div *ngFor="let item of midlepagelarge">
+          <app-button
+            *ngFor="let btnSetting of btnSettings"
+            [mode]="HandleButtonMode('First')"
+            [color]="btnSetting.color"
+            [spacing]="btnSetting.compact"
+            (onClick)="funcButton(btnSetting, 0)"
+            >{{ page + 1 }}</app-button
+          >
+        </div>
+        <app-button
+          ngIf=""
+          *ngFor="let btnSetting of btnSettings"
+          [mode]="HandleButtonMode('sdfa')"
+          [color]="btnSetting.color"
+          [spacing]="btnSetting.compact"
+          (onClick)="funcButton(btnSetting, 1)"
+          >...</app-button
+        >
+      </div>
+
+      <div *ngIf="page > 5 && totalpages > totalpages - 4">
+        <div *ngFor="let item of midlepagesmall">
+          <app-button
+            ngIf=""
+            *ngFor="let btnSetting of btnSettings"
+            [mode]="HandleButtonMode('First')"
+            [color]="btnSetting.color"
+            [spacing]="btnSetting.compact"
+            (onClick)="funcButton(btnSetting, 1)"
+            >{{ page + 1 }}</app-button
+          >
+        </div>
+        <app-button
+          ngIf=""
+          *ngFor="let btnSetting of btnSettings"
+          [mode]="HandleButtonMode('First')"
+          [color]="btnSetting.color"
+          [spacing]="btnSetting.compact"
+          (onClick)="funcButton(btnSetting, 1)"
+          >...</app-button
+        >
+      </div> -->
+
+      <!-- <div *ngFor="let btnSetting of btnSettings">
+          <app-button
+            *ngFor="let page of visiblePages"
+            [ngClass]="{ selected: value.page === page }"
+            [mode]="HandleButtonMode()"
+            [color]="btnSetting.color"
+            [spacing]="btnSetting.compact"
+            (onClick)="funcButton(btnSetting, page)"
+            >{{ page }}</app-button
+          >
+        </div> -->
+
+      <app-button
+        *ngFor="let btnSetting of btnSettings"
+        ngstyle="padding: 0px 12px"
+        [mode]="HandleButtonMode('Next')"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="funcButton(btnSetting, totalpages)"
+        >{{ totalpages }}</app-button
+      >
+      <app-button
+        *ngFor="let btnSetting of btnSettings"
+        [padding]="'0px 12px'"
+        [mode]="HandleButtonMode('Next')"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="funcButton(btnSetting, page + 1)"
+        >Next</app-button
+      >
+
+      <app-button
+        *ngFor="let btnSetting of btnSettings"
+        [padding]="'0px 12px'"
+        ngstyle="padding: 0px 12px"
+        [mode]="HandleButtonMode('Last')"
+        [color]="btnSetting.color"
+        [spacing]="btnSetting.compact"
+        (onClick)="funcButton(btnSetting, totalpages)"
+        >Last</app-button
+      >
+
+      <!-- <select
+        [ngModel]="value.pageSize"
+        (ngModelChange)="selectPageSize($event)"
+      >
+        <option *ngFor="let size of pageSizes" [value]="size">
+          {{ size }}
+        </option>
+      </select> -->
+    </div>
+  </div>
+</div>

@@ -11,9 +11,11 @@ export class BannerComponent {
   @Input() description: string = '';
   @Input() btnSettings: ButtonSetting[] = [];
   hidden: boolean = true;
+  @Input() show: boolean = true;
 
-  goToGoogle() {
-    window.open('https://google.com', '_blank');
+  funcButton(key: string) {
+    // window.open('https://google.com', '_blank');
+    // this.onClickButton.emit();
   }
 
   getClassBg() {
@@ -28,6 +30,9 @@ export class BannerComponent {
     return `./../../../assets/icon/info/ic-${BannerMode[
       this.mode
     ].toLowerCase()}.svg`;
+  }
+  closeComponent(): void {
+    this.show = false;
   }
 
   iconBanner() {

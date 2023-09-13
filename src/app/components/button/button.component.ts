@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ButtonMode } from 'src/assets/beheviors/button/ButttonMode';
 import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
 import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
 
@@ -10,6 +11,8 @@ import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
 export class ButtonComponent implements OnInit {
   @Input() color: ColorEnum = ColorEnum.DEFAULT;
   @Input() spacing: SpacingEnum = SpacingEnum.DEFAULT;
+  @Input() mode: ButtonMode = ButtonMode.DEFAULT;
+  @Input() padding!: string;
   @Output() onClick: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
@@ -23,5 +26,11 @@ export class ButtonComponent implements OnInit {
 
   handleClick() {
     this.onClick.emit();
+  }
+  hiddenButton(): boolean {
+    if (this.mode === ButtonMode.DISABLED) {
+      return true;
+    }
+    return false;
   }
 }

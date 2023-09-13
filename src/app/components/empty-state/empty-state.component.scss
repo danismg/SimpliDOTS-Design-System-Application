@@ -1,10 +1,14 @@
 @import "../../../assets/assets-color/color.scss";
 @import "../../../assets/assets-color/font.scss";
 
+p {
+  margin: 0;
+  padding: 0;
+}
 
 .empty__items {
   display: flex;
-  width: 552px;
+  width: 100%;
   padding: 48px 0px;
   flex-direction: column;
   justify-content: center;
@@ -76,8 +80,6 @@
 .temp__icon-itemplate {
   width: 160px;
   height: 160px;
-  opacity: 0.3499999940395355;
-  background: var(--light-color-background-accent-magenta-subtle, #e774bb);
 
   align-items: center;
 }

@@ -5,11 +5,26 @@ p {
 items__right {
   width: max-content;
 }
+.indicator__title {
+  margin-bottom: 20px !important;
+}
 
 .items__titles {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+
+.indicator__title {
+  align-self: start;
+  color: var(--text-default, #1f2e34);
+
+  /* H4 */
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 133.333% */
 }
 
 .items-ic-number {
@@ -135,7 +150,7 @@ items__right {
   padding: 16px;
   flex-direction: column;
   align-items: flex-end;
-  gap: 20px;
+  // gap: 20px;
   background: var(--neutral-10, #fafbfc);
 }
 

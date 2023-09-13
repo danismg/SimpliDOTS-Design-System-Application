@@ -1,5 +1,35 @@
-<div class="indicator__list">
-  <div class="indicator__container">
+<div class="indicator__list" *ngIf="show === true">
+  <p class="indicator__title">{{ title }}</p>
+  <div class="indicator__container" *ngFor="let setting of settings">
+    <div class="indicator__container-top">
+      <div class="items__titles">
+        <div class="items__left items__left-default">
+          <p class="items__ic-number">{{ setting.id }}</p>
+        </div>
+        <div class="items__right">
+          <div class="item__title">{{ setting.title }}</div>
+          <div class="item__desc" *ngIf="setting.description.length > 0">
+            {{ setting.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="indicator__container-down">
+      <div class="indicator__container-down-left">
+        <div class="divider">
+          <div
+            class="divider-line"
+            *ngIf="setting.line === true && setting.id < settings.length"
+          ></div>
+        </div>
+      </div>
+      <div class="indicator__container-down-right">
+        <div class="indicator__content"></div>
+        <div class="indicator__content"></div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="indicator__container">
     <div class="indicator__container-top">
       <div class="items__titles">
         <div class="items__left items__left-default">
@@ -44,30 +74,6 @@
       <div class="indicator__container-down-right">
         <div class="indicator__content"></div>
         <div class="indicator__content"></div>
-      </div>
-    </div>
-  </div>
-  <div class="indicator__container">
-    <div class="indicator__container-top">
-      <div class="items__titles">
-        <div class="items__left items__left-default">
-          <p class="items__ic-number">1</p>
-        </div>
-        <div class="items__right">
-          <div class="item__title">Title</div>
-          <div class="item__desc">Description</div>
-        </div>
-      </div>
-    </div>
-    <div class="indicator__container-down">
-      <div class="indicator__container-down-left">
-        <div class="divider">
-          <div class="divider-line"></div>
-        </div>
-      </div>
-      <div class="indicator__container-down-right">
-        <div class="indicator__content"></div>
-        <div class="indicator__content"></div>
         <div class="indicator__content"></div>
         <div class="indicator__content"></div>
       </div>
@@ -96,19 +102,14 @@
         <div class="indicator__content"></div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="indicator__btns">
     <app-button
-      [color]="colorBtn.SUBTLE"
-      [spacing]="spacingBtn.COMPACT"
-      (onClick)="goToGoogle()"
-      >Batal</app-button
-    >
-    <app-button
-      [color]="colorBtn.PRIMARY"
-      [spacing]="spacingBtn.DEFAULT"
-      (onClick)="goToGoogle()"
-      >Simpan</app-button
+      *ngFor="let btnSetting of btnSettings"
+      [color]="btnSetting.color"
+      [spacing]="btnSetting.compact"
+      (onClick)="funcButton(btnSetting)"
+      >{{ btnSetting.title }}</app-button
     >
   </div>
 </div>

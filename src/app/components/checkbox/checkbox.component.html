@@ -1,0 +1,18 @@
+<div [class]="changeBackground()">
+  <label class="label__checkbox">
+    <input
+      class="label__checked"
+      type="checkbox"
+      id="checkbox"
+      [(ngModel)]="isicheckbox"
+      (ngModelChange)="oncheckboxchange()"
+    />
+    <span [class]="checkmark()"></span>
+  </label>
+  <div class="label__items">
+    <label class="label__title label__text" for="scales">{{ text }}</label>
+    <p class="label__desc">{{ description }}</p>
+  </div>
+</div>
+
+<!-- <input type="text" [(ngModel)]="inputtext" (ngModelChange)="changeInput()" /> -->

@@ -1,3 +1,9 @@
-<button type="button" [class]="getClassNames()" (click)="handleClick()">
+<button
+  type="button"
+  [style.padding]="padding"
+  [class]="getClassNames()"
+  (click)="handleClick()"
+  [disabled]="hiddenButton()"
+>
   <ng-content></ng-content>
 </button>

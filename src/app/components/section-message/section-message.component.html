@@ -1,4 +1,4 @@
-<div [class]="getClassNames()">
+<div *ngIf="show === true" [class]="getClassNames()">
   <div class="slcMessage__left">
     <img class="slcMessage__icon" [src]="getClassIcons()" alt="" />
   </div>
@@ -14,7 +14,7 @@
         *ngFor="let btnSetting of btnSettings"
         [color]="btnSetting.color"
         [spacing]="btnSetting.compact"
-        (onClick)="goToGoogle()"
+        (onClick)="funcButton(btnSetting)"
         >{{ btnSetting.title }}</app-button
       >
     </div>

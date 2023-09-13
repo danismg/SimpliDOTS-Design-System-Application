@@ -1,7 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import ButtonSetting from 'src/app/models/ButtonSetting';
 import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
-import { SpacingEnum } from 'src/assets/beheviors/button/SpacingEnum';
 import {
   SctMessageColor,
   SctMessageIcon,
@@ -19,9 +18,18 @@ export class SectionMessageComponent {
   @Input() title: string = "Flag's Title";
   @Input() description: string = '';
   @Input() btnSettings: ButtonSetting[] = [];
+  @Input() show: boolean = true;
+  @Output() onButtoClick = new EventEmitter<string>();
 
-  goToGoogle() {
-    window.open('https://google.com', '_blank');
+  funcButton(btnSetting: ButtonSetting) {
+    // window.open('https://google.com', '_blank');
+    if (btnSetting.title == 'Button') {
+      this.show = false;
+      this.onButtoClick.emit(btnSetting.title);
+    } else if (btnSetting.title == 'Button1') {
+      this.show = false;
+      this.onButtoClick.emit(btnSetting.title);
+    }
   }
 
   getClassNames() {

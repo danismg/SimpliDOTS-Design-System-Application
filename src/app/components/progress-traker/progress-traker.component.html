@@ -1,17 +1,26 @@
 <div class="trackers__list">
-  <div
-    *ngFor="let setting of settings"
-    class="trackers__titles"
-    (click)="handleClick()"
-  >
-    <!-- *ngIf="setting.mode.toLowerCase() === default" -->
-    <p class="trackers__ic-number trackers__left trackers__left-default">
-      {{ setting.id }}
-    </p>
-    <div class="trackers__right">
-      <div class="tracker__title">{{ setting.title }}</div>
-      <div *ngIf="setting.description.length > 0" class="tracker__desc">
-        {{ setting.description }}
+  <div *ngFor="let setting of settings" class="">
+    <div
+      class="trackers__titles"
+      (click)="handleClick(setting)"
+      [class]="changeColorBg(setting.mode)"
+    >
+      <div
+        *ngIf="!setting.visited; else noVisited"
+        [class]="changeMode(setting.mode)"
+      >
+        {{ setting.id }}
+      </div>
+
+      <ng-template #noVisited>
+        <img src="./../../../assets/icon/info/ic-visited.svg" alt="" />
+      </ng-template>
+
+      <div class="trackers__right">
+        <div class="tracker__title">{{ setting.title }}</div>
+        <div *ngIf="setting.description.length > 0" class="tracker__desc">
+          {{ setting.description }}
+        </div>
       </div>
     </div>
   </div>

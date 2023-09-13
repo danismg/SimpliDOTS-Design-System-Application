@@ -5,7 +5,7 @@
   >
     <p>%</p>
   </div>
-  <input placeholder="Placeholder" [class]="getClassInput()" type="text" />
+  <input [placeholder]="placeholder" [class]="getClassInput()" type="text" />
   <div
     *ngIf="getClassPersen() == 'persen-righ'"
     class="text-field__persen persen-right"

@@ -1,4 +1,4 @@
-<div [class]="getClassBg()">
+<div *ngIf="show === true" [class]="getClassBg()">
   <div class="banner__item">
     <div class="frame">
       <img [src]="getSRC()" alt="" [hidden]="iconBanner()" />
@@ -13,9 +13,15 @@
       *ngFor="let btnSetting of btnSettings"
       [color]="btnSetting.color"
       [spacing]="btnSetting.compact"
-      (onClick)="goToGoogle()"
+      (onClick)="funcButton($event)"
       >{{ btnSetting.title }}</app-button
     >
   </div>
-  <img src="./../../../assets/icon/info/ic-exit.svg" alt="" />
+  <img
+    style="cursor: pointer"
+    (click)="closeComponent()"
+    class="ic-exit"
+    src="./../../../assets/icon/info/ic-exit.svg"
+    alt=""
+  />
 </div>

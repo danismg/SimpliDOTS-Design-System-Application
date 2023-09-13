@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import ButtonSetting from 'src/app/models/ButtonSetting';
+import { ColorEnum } from 'src/assets/beheviors/button/ColorEnum';
 import { FlagColor, FlagIcon } from 'src/assets/beheviors/flag/FlagMode';
 @Component({
   selector: 'flag',
@@ -9,24 +10,34 @@ import { FlagColor, FlagIcon } from 'src/assets/beheviors/flag/FlagMode';
 export class FlagComponent {
   @Input() color: FlagColor = FlagColor.DEFAULT;
   @Input() icon: FlagIcon = FlagIcon.IMAGE;
+  @Input() show: boolean = true;
 
   @Input() title: string = "Flag's Title";
   @Input() description: string = '';
-  @Input() btnSettings: ButtonSetting[] = [
-    // {
-    //   title: 'No Thanks',
-    //   color: ColorEnum.DEFAULT,
-    //   compact: SpacingEnum.DEFAULT,
-    // },
-    // {
-    //   title: 'Understood',
-    //   color: ColorEnum.PRIMARY,
-    //   compact: SpacigEnum.COMPACT,
-    // },
-  ];
+  @Input() btnSettings: ButtonSetting[] = [];
+  @Output() onButtoClick = new EventEmitter<ButtonSetting>();
 
-  goToGoogle() {
-    window.open('https://google.com', '_blank');
+  funcButton(btnSetting: ButtonSetting) {
+    this.onButtoClick.emit(btnSetting);
+    if (
+      btnSetting.color === ColorEnum.LINK &&
+      btnSetting.title === 'No thanks'
+    ) {
+      this.show = false;
+      // this.onButtoClick.emit(btnSetting);
+    }
+    // window.open('https://google.com', '_blank');
+    // if (btnSetting.color === ColorEnum.PRIMARY) {
+    //   this.show = false;
+    //   this.onButtoClick.emit(ColorEnum.PRIMARY);
+    // } else if (btnSetting.color === ColorEnum.SECONDARY) {
+    //   this.onButtoClick.emit(ColorEnum.SECONDARY);
+    // } else if (btnSetting.color === ColorEnum.DEFAULT) {
+    //   this.show = false;
+    //   this.onButtoClick.emit(ColorEnum.DEFAULT);
+    // } else if (btnSetting.color === ColorEnum.SUBTLE) {
+    //   this.onButtoClick.emit(ColorEnum.SUBTLE);
+    // } else
   }
 
   getClassBg() {
@@ -44,6 +55,10 @@ export class FlagComponent {
     ].toLowerCase()}.svg`;
   }
 
+  closeComponent(): void {
+    this.show = false;
+  }
+
   HiddenButtonList() {
     if (this.btnSettings.length > 0) {
       return true;
@@ -52,23 +67,3 @@ export class FlagComponent {
     }
   }
 }
-// get colorBtn(): typeof ColorEnum {
-//   return ColorEnum;
-// }
-// get spacingBtn(): typeof SpacingEnum {
-//   return SpacingEnum;
-// }
-// ChangeTextBtn(): String {
-//   if (this.color === FlagColor.DEFAULT) {
-//     return 'Understood';
-//   } else {
-//     return 'Join the conversation';
-//   }
-// }
-// ChangeColorBtn(): ColorEnum {
-//   if (FlagColor.DEFAULT || FlagColor.Success) {
-//     return ColorEnum.PRIMARY;
-//   } else {
-//     return ColorEnum.DEFAULT;
-//   }
-// }

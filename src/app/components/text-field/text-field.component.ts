@@ -7,6 +7,7 @@ import { TextFieldInput } from 'src/assets/beheviors/text-field/TextFieldMode';
   styleUrls: ['./text-field.component.scss'],
 })
 export class TextFieldComponent {
+  @Input() placeholder: string = 'Input your text';
   @Input() input: TextFieldInput = TextFieldInput.DEFAULT;
 
   getClassInput(): string {

@@ -6,16 +6,19 @@
   border-radius: 4px;
   width: max-content;
   text-align: start;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--background-neutral-subtle-hover, #f4f5f7);
   }
 }
 
-.trackers__titles-hover,
+.trackers__titles-default {
+  background: #fff;
+}
 .trackers__titles-disabled,
 .trackers__titles-selected {
-  background-color: var(--background-neutral-subtle-hover, #f4f5f7);
+  background: var(--background-disabled, #f4f5f7) !important;
 }
 
 .trackers-ic-number {
@@ -46,7 +49,7 @@
   background: var(--background-neutral-hover, #dfe1e6);
 }
 
-.trackers__left-complated {
+.trackers__left-selected {
   color: var(--text-selected, #1e90ff) !important;
 
   background: var(--background-selected, #dff0ff);
@@ -58,7 +61,7 @@
 }
 
 .tracker__title {
-  width: 172px;
+  width: 179px;
   color: var(--text-subtle, #5e6973);
   font-family: Roboto;
   font-size: 14px;

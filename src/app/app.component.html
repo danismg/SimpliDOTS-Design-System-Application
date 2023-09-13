@@ -4,7 +4,7 @@
       <img class="temp__icon" src="./../assets/Stickersheet.svg" alt="" />
     </div>
     <div class="temp__descs">
-      <p class="temp__title-text">Banner</p>
+      <p class="temp__title-text">Component SimpliDOTS</p>
       <p class="temp__desc">
         Common component examples ready to be copy and pasted into your designs
       </p>
@@ -45,7 +45,7 @@
                 <app-button
                   [color]="colorBtn.PRIMARY"
                   [spacing]="spacingBtn.DEFAULT"
-                  (onClick)="goToGoogle()"
+                  (onClick)="goToFacebook()"
                   >Go To Google</app-button
                 >
               </th>
@@ -70,7 +70,11 @@
                 <!-- <img src="./../assets/icon/info/ic-success.svg" alt="" /> -->
               </th>
               <th style="width: 1fr">Breadcrumbs</th>
-              <th style="width: 3fr"></th>
+              <th style="width: 3fr">
+                <breadcrumbs
+                  [listBreadCrumbsSettings]="breadCrumbsSettings"
+                ></breadcrumbs>
+              </th>
             </tr>
 
             <!-- OnBoarding Modal -->
@@ -85,6 +89,8 @@
                   [description]="
                     'Additional information that will help users understand the modal.'
                   "
+                  [icon]="'onboarding-modal'"
+                  [colorBg]="'rgba(73, 86, 94, 0.5)'"
                   [btnSettings]="btn__OnBoardingModalSettings"
                 ></onboarding-modal>
               </th>
@@ -99,9 +105,7 @@
               <th style="width: 3fr">
                 <empty-state
                   [title]="'This is the empty state’s title'"
-                  [description]="
-                    'Additional information that will help users understand the empty state.'
-                  "
+                  [description]="'Additional inform'"
                   [btnLinkSettings]="btnLink__EmptyStateSettings"
                   [btnSettings]="btn__EmptyStateSettings"
                 ></empty-state>
@@ -129,6 +133,7 @@
                 <flag
                   [color]="colorFlag.DEFAULT"
                   [icon]="iconFlag.IMAGE"
+                  (onButtoClick)="funcButtonFlag($event)"
                 ></flag>
               </th>
             </tr>
@@ -137,6 +142,7 @@
               <th style="width: 1fr">Flag Description</th>
               <th style="width: 3fr">
                 <flag
+                  [show]="showFlag"
                   [color]="colorFlag.DEFAULT"
                   [icon]="iconFlag.IMAGE"
                   [btnSettings]="btn__FlagSettings"
@@ -144,6 +150,7 @@
                   [description]="
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloremque molestiae minus ad suscipit iste.'
                   "
+                  (onButtoClick)="funcButtonFlag($event)"
                 ></flag>
               </th>
             </tr>
@@ -151,7 +158,14 @@
               <th></th>
               <th style="width: 1fr">Flag Long</th>
               <th style="width: 3fr">
-                <flag-long></flag-long>
+                <flag-long
+                  [title]="'Flag'"
+                  [icon]="iconFlag.IMAGE"
+                  [color]="colorFlag.DEFAULT"
+                  [btnSettings]="btn__FlagLongSettings"
+                  [infoSettings]="infoFlagLongSettings"
+                  (onButtoClick)="funcButtonFlagLong($event)"
+                ></flag-long>
               </th>
             </tr>
             <tr>
@@ -173,17 +187,29 @@
             <tr>
               <th></th>
               <th style="width: 1fr">Progress Traker</th>
-              <th style="width: 3fr">
+              <th style="width: 3fr; display: flex; flex-direction: row">
                 <progress-traker
                   [settings]="progressTrakerSettings"
+                  (trackerClick)="showComponentTracker($event)"
                 ></progress-traker>
+                <inline-helper
+                  *ngIf="trackerVisible === true"
+                  [title]="labelName"
+                >
+                  <div class="Example__Component"></div>
+                </inline-helper>
               </th>
             </tr>
             <tr>
               <th></th>
               <th style="width: 1fr">Progress Indicator</th>
               <th style="width: 3fr">
-                <progress-indicator></progress-indicator>
+                <progress-indicator
+                  [title]="'Text'"
+                  [btnSettings]="btn__ProgressIndicatorSettings"
+                  [settings]="progressIndicatorSettings"
+                  (onButtoClick)="funcButtonProgressIndicator($event)"
+                ></progress-indicator>
               </th>
             </tr>
             <tr>
@@ -198,6 +224,7 @@
                   [color]="colorSctMessage.WARNING"
                   [icon]="iconSctMessage.WARNING"
                   [btnSettings]="btn__SctMessageSettings"
+                  (onButtoClick)="funcButtonSctMessage($event)"
                 ></section-message>
               </th>
             </tr>
@@ -205,7 +232,46 @@
               <th></th>
               <th style="width: 1fr">Text Field</th>
               <th style="width: 3fr">
-                <text-field [input]="inputTextField.LEFT"></text-field>
+                <text-field
+                  [input]="inputTextField.LEFT"
+                  [placeholder]="'Input Your Text'"
+                ></text-field>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Text Field</th>
+              <th style="width: 3fr">
+                <text-area
+                  [size]="sizeTextArea.DEFAULT"
+                  [mode]="modeTextArea.DEFAULT"
+                  [placeholder]="'Enter long form text here'"
+                ></text-area>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Pagination</th>
+              <th style="width: 3fr">
+                <pagination
+                  [btnSettings]="btn__PaginationSettings"
+                ></pagination>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">Pagination</th>
+              <th style="width: 3fr">
+                <pagination
+                  [btnSettings]="btn__PaginationSettings"
+                ></pagination>
+              </th>
+            </tr>
+            <tr>
+              <th></th>
+              <th style="width: 1fr">checkbox</th>
+              <th style="width: 3fr">
+                <checkbox></checkbox>
               </th>
             </tr>
           </tbody>

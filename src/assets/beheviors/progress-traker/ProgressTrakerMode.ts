@@ -3,3 +3,7 @@ export enum ProgressTrakerMode {
   DISABLED = 1,
   SELECTED = 2,
 }
+export enum ProgressTrakerCondition {
+  UnVisited = 0,
+  Visited = 1,
+}

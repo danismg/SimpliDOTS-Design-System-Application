@@ -1,0 +1,60 @@
+.textarea__default {
+  border: 1.5px solid var(--border-input, #c2c7cf);
+  background: var(--background-input-default, #fff);
+}
+.textarea__invalid {
+  border-radius: 3px;
+  border: 1.5px solid var(--border-danger, #e81a3e);
+  background: var(--background-input-default, #fff);
+}
+.textarea__disabled {
+  border-radius: 3px;
+  border: 1.5px solid var(--border-disabled, #dfe1e6);
+  background: var(--background-disabled, #f4f5f7);
+}
+
+.textarea__card {
+  resize: none;
+  display: flex;
+  width: 400px;
+  height: 86px;
+
+  align-items: flex-start;
+  gap: 6px;
+  border-radius: 3px;
+
+  flex: 1 0 0;
+  align-self: stretch;
+  color: var(--text-subtlest, #6e7882);
+
+  /* Body/Reg */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  outline: none;
+  resize: none;
+
+  &:hover {
+    border-radius: 3px;
+    background: var(--background-input-hover, #f4f5f7);
+  }
+
+  &:active {
+    border-radius: 3px;
+    border: 1.5px solid var(--border-focused, #006cd6) !important;
+    background: var(--background-input-pressed, #fff);
+  }
+  &:focus {
+    border-radius: 3px;
+    border: 1.5px solid var(--border-focused, #006cd6) !important;
+    background: var(--background-input-pressed, #fff);
+  }
+}
+.textarea__size-default {
+  padding: 8px;
+}
+.textarea__size-compact {
+  padding: 4px 8px;
+}

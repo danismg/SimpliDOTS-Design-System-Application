@@ -1,13 +1,13 @@
-<div class="empty__items">
+<div *ngIf="show === true" class="empty__items">
   <div class="empty__item-top">
-    <div class="temp__icon-itemplate"></div>
+    <!-- <div class="temp__icon-itemplate"> -->
+    <img class="temp__icon-itemplate" [src]="getIconName()" alt="" />
+    <!-- </div> -->
   </div>
   <div class="empty__item-down">
-    <div class="empty__texts">
-      <p class="empty__title">This is the empty state’s title</p>
-      <p class="empty__desc">
-        Additional information that will help users understand the empty state.
-      </p>
+    <div *ngIf="showStyles()" class="empty__texts">
+      <p class="empty__title">{{ title }}</p>
+      <p class="empty__desc">{{ description }}</p>
     </div>
     <div class="empty__btns">
       <div class="empty__btn-top">
@@ -15,7 +15,7 @@
           *ngFor="let btnSetting of btnSettings"
           [color]="btnSetting.color"
           [spacing]="btnSetting.compact"
-          (onClick)="goToGoogle()"
+          (onClick)="funcButton(btnSetting)"
           >{{ btnSetting.title }}</app-button
         >
       </div>
@@ -24,7 +24,7 @@
         *ngFor="let btnSetting of btnLinkSettings"
         [color]="btnSetting.color"
         [spacing]="btnSetting.compact"
-        (onClick)="goToGoogle()"
+        (onClick)="funcButton(btnSetting)"
         >{{ btnSetting.title }}</app-button
       >
     </div>
